@@ -35,4 +35,3 @@ def validate_password(password:str):
         is_valid = False
     return is_valid
 
-print(validate_password('oajdsah9D'))
