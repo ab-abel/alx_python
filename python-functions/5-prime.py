@@ -10,10 +10,8 @@ def is_prime(num):
             break
         else:
             a.append('True')
-    if ('False' in a or num==1): 
-        print(num, " is not a prime number")
+    if ('False' in a or num==1 or num < 0): 
+        is_valid = False
     else:
-        print(num, "is a prime number")
-
-
-is_prime(1)
+        is_valid = True
+    return is_valid
