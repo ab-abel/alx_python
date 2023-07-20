@@ -10,7 +10,7 @@ def is_prime(num):
             break
         else:
             a.append('True')
-    if ('False' in a or num==1 or num < 0): 
+    if ('False' in a or num<=1): 
         is_valid = False
     else:
         is_valid = True
