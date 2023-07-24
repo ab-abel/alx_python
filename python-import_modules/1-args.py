@@ -13,8 +13,8 @@ def list_args(*argv):
             print("{}: {}".format(x+1, argv[x]))
         
 if __name__ == "__main__":
-    # list_args("Hello")
+    list_args("Hello")
     # list_args("Hello", "Holberton")
     # list_args()
     # list_args("98", "Battery", "street")
-    list_args("98", "Battery", "street", "CA")
+    # list_args("98", "Battery", "street", "CA")
