@@ -4,9 +4,12 @@ def add(a, b):
     b = 2
     return(a+b)
 
-# print(add(1,3))
+# # print(add(1,3))
+
+def main():
+    print(add(1, 2))
 
 if __name__=="__main__":
-    print(add())
+    main()
     # import 0-add.py
 
