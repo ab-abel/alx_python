@@ -12,7 +12,7 @@ def list_args(*argv):
         print("{} arguments:".format(argv_lenght))
     for x in range(1, len(argv[0])):
             print("{}: {}".format(x, argv[0][x]))
-        
+       
 if __name__ == "__main__":
     cmd_input = []
     for i in range(0, len(sys.argv)):
