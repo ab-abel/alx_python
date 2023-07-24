@@ -3,7 +3,7 @@
 def list_args(*argv):
     argv_lenght = len(argv)
     if argv_lenght == 1:    
-        print("{}: argument.".format(argv_lenght))
+        print("{}: argument:".format(argv_lenght))
     else:
         print("{}: arguments.".format(argv_lenght))
     for x in range(0, argv_lenght):
