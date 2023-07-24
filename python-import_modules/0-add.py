@@ -2,9 +2,8 @@
 def add(a, b):
     a = 1
     b = 2
-    return(a+b)
-
-# # print(add(1,3))
+    answer = "{} + {} = {}".format(a ,b, a+b)
+    return(answer) 
 
 def main():
     print(add(1, 2))
