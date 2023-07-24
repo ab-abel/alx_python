@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-def add(a, b):
-    a = 1
-    b = 2
-    answer = "{} + {} = {}".format(a ,b, a+b)
-    return(answer) 
+from add_0 import add
 
 def main():
-    print(add(1, 2))
+    a = 1
+    b = 2
+    print(add(a, b))
 
 if __name__=="__main__":
     main()
