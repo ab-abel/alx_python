@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def add(a, b):
-    answer = "{} + {} = {}".format(a ,b, a+b)
+    answer = a + b
     return(answer) 

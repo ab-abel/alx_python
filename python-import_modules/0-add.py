@@ -4,9 +4,9 @@ from add_0 import add
 def main():
     a = 1
     b = 2
-    print(add(a, b))
+    answer = "{} + {} = {}".format(a, b, add(a, b))
+    print(answer)
 
 if __name__=="__main__":
     main()
-    # import 0-add.py
 
