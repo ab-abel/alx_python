@@ -4,7 +4,6 @@
 def safe_print_division(a, b):
     try:
         result = a/b
-
     except ZeroDivisionError:
         result = "None"
     finally:
@@ -12,5 +11,5 @@ def safe_print_division(a, b):
         print("{:d} / {:d} = {}".format(a, b, result))
 
 
-if __name__ == "__main__":
-    safe_print_division(12, 0)
+# if __name__ == "__main__":
+#     safe_print_division(12, 0)
