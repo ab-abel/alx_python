@@ -9,7 +9,3 @@ def safe_print_division(a, b):
     finally:
         print("Inside result: {}". format(result))
         print("{:d} / {:d} = {}".format(a, b, result))
-
-
-# if __name__ == "__main__":
-#     safe_print_division(12, 0)
