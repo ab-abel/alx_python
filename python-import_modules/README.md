@@ -3,11 +3,13 @@
 # ALL TASK
 
 ## Task 0
-    - Import a simple function from a simple file
+### Import a simple function from a simple file
+    - Import a simple function from a simple file create a file and use the import keyword to import the function
 
 ## Task 1
-### Copy - Cut - Paste
-    using the string formatter to format a string out of an output.
+### How to make a script dynamic!
+    - use the py filename vraiable to get data from the terminal and print them using the
+    - import sys command for args
 
 ## Task 2
 ###  Positive anything is better than negative nothing
