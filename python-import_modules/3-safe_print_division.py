@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-
-
+# Using exception to check division properties
 def safe_print_division(a, b):
     try:
         result = a/b
     except ZeroDivisionError:
-        print("None")
-    else:
-        print("Inside result: {}".format(result))
+        result = "None"
     finally:
-        print("{:d} / {:d} = {}".format(a, b, result))
+        print("Inside result: {}".format(result))
+        msg ="{:d} / {:d} = {}".format(a, b, result)
+    return msg
