@@ -24,3 +24,8 @@
     - Prototype: def raise_exception():
     - You are not allowed to import any module
  
+## Task 5
+### Raise exception with message
+   - Write a function that raises a NameError exception with the message "C is fun".
+    - Prototype: def raise_exception():
+    - You are not allowed to import any module
