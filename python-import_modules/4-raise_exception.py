@@ -4,6 +4,6 @@
 
 def raise_exception():
     try:
-        raise TypeError 
+        raise TypeError
     except TypeError as te:
         print("Exception has been raised")
