@@ -19,6 +19,8 @@
 ### Integers division with debug
     - Write a function that divides 2 integers and prints the result.
 ## Task 4
-### Hexadecimal printings
-    Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
+### Raise exception
+   - Write a function that raises a type exception.
+    - Prototype: def raise_exception():
+    - You are not allowed to import any module
  
