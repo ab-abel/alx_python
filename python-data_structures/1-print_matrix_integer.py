@@ -10,8 +10,8 @@ def print_matrix_integer(matrix=[[]]):
     if len(new_mat) == 0:
         new_mat.append('$')
     # print(new_mat)
-    new_mat  =''.join(['{:2d}'.format(i) if type(i) == int else str(i) for i in new_mat])
-    print(new_mat)
+    # new_mat  =''.join(['{:2d}'.format(i) if type(i) == int else str(i) for i in new_mat])
+    # print(new_mat)
 
 # vec = [[1,2,3], [4,5,6], [7,8,9]]
 
