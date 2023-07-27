@@ -17,14 +17,14 @@ def update_dictionary(a_dictionary, key, value):
                 a_dictionary[key] = value
             else:
                 a_dictionary[key] = value        
-            # return a_dictionary
+            return a_dictionary
     return a_dictionary
 
 my_dict = { }
 key = "a"
 value = "a"
 new_dict = update_dictionary(my_dict, key, value)
-print(new_dict)
+# print(new_dict)
 print(print_sorted_dictionary(new_dict))
-# print("xx")
-# print_sorted_dictionary(my_dict)
+print("xx")
+print_sorted_dictionary(my_dict)
