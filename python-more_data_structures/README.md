@@ -13,5 +13,12 @@
     - You are not allowed to import any module
 
 ## Task 2
-###  Positive anything is better than negative nothing
-    This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
+###  Update dictionary
+    Write a function that replaces or adds key/value in a dictionary.
+
+    - Prototype: def update_dictionary(a_dictionary, key, value):
+    - key argument will be always a string
+    value argument will be any type
+    -  If a key exists in the dictionary, the value will be replaced
+    - If a key doesn’t exist in the dictionary, it will be created
+    - You are not allowed to import any module
