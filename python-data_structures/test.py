@@ -119,3 +119,37 @@ print_matrix_integer()
         new_mat.append('$')
  
     return(new_mat)
+
+
+
+
+
+
+    def print_matrix_integer(matrix=[[]]):
+    new_mat = [num for elem in matrix for num in elem]
+    new_string_mat = ["{:d}".format(i) if type(i) == int else str(i) for i in new_mat]
+    
+    for i in range(3, len(new_string_mat)+1, 3):
+        print(new_string_mat[i-3:i], end='$')
+    #     print()
+    # print(new_mat[0])
+    print_str = ''
+    for i in new_string_mat:
+        print_str += "{:2s}".format(i)
+        # print(i)
+    # print(print_str)
+    # print(len(print_str))
+
+
+    # print(new_string_mat)
+
+    # for i in new_string_mat:
+        
+
+
+
+vec = [[1,2,3], [4,5,6], [7,8,9]]
+print_matrix_integer(vec)
+# print_matrix_integer("--")
+# print_matrix_integer()
+
