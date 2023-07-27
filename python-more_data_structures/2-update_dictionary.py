@@ -3,15 +3,13 @@
 
 
 def update_dictionary(a_dictionary, key, value):
-    for k, v in a_dictionary.items():
-        if key in k == True:
-            a_dictionary[key] = value
-        else:
-            a_dictionary[key] = value        
-        return a_dictionary
-
-def print_sorted_dictionary(my_dict):
-    """ Print sorted dictionary """
-    keys = sorted(my_dict.keys())
-    for k in keys:
-        print("{}: {}".format(k, my_dict[k]))
+    if len(a_dictionary) == 0:
+       a_dictionary[key] = value
+       print_sorted_dictionary(a_dictionary)
+    else:
+        for k, v in a_dictionary.items():
+            if key in k == True:
+                a_dictionary[key] = value
+            else:
+                a_dictionary[key] = value
+    return a_dictionary
