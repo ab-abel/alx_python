@@ -5,11 +5,12 @@
 ## Task 0
 ###  matrix manipulation
     - Write a function that that square every given filed in a matrix.
-    
+
 ## Task 1
-### How to make a script dynamic!
-    - use the py filename vraiable to get data from the terminal and print them using the
-    - import sys command for args
+### Present in both
+    - Write a function that returns a set of common elements in two sets.
+    - Prototype: def common_elements(set_1, set_2):
+    - You are not allowed to import any module
 
 ## Task 2
 ###  Positive anything is better than negative nothing
