@@ -12,5 +12,6 @@ def update_dictionary(a_dictionary, key, value):
 
 
 def print_sorted_dictionary(a_dictionary):
-    keys = sorted(a_dictionary.items())
+    for k, v in a_dictionary.items():
+        keys = sorted(a_dictionary.keys())
     return keys
