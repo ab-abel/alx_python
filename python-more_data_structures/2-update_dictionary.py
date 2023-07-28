@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # update dictionary if key exist otherwirse add to dicationatry
+#the two return was neccessary for the bug fix comon
 
 
 def update_dictionary(a_dictionary, key, value):
