@@ -3,7 +3,9 @@
 
 
 def best_score(a_dictionary):
-    if len(a_dictionary) == 0 or a_dictionary == None:
+    if a_dictionary == None:
+        best_score = None
+    elif len(a_dictionary) == 0:
         best_score = None
     else:
         for k,v in a_dictionary.items():
