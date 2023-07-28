@@ -5,4 +5,5 @@
 def best_score(a_dictionary):
     for k,v in a_dictionary.items():
         if v == max(list(a_dictionary.values())):
-            print("Best score: {}".format(k))
+            best_score = k
+    return best_score
