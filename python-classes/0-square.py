@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# square.py
+#square.py
 """
 This is a module design to explore basic concept of class
 """
