@@ -10,21 +10,24 @@
     -   You are not allowed to import any module
 
 ## Task 1
-### Present in both
-    - Write a function that returns a set of common elements in two sets.
-    - Prototype: def common_elements(set_1, set_2):
-    - You are not allowed to import any module
+### Size validation
+Write a class Square that defines a square by: (based on 0-square.py)
 
+    -   Private instance attribute: size
+    -   Instantiation with optional size: def __init__(self, size=0):
+        -   size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+        -   if size is less than 0, raise a ValueError exception with the message size must be >= 0
+    -   You are not allowed to import any module
 ## Task 2
-###  Update dictionary
-    Write a function that replaces or adds key/value in a dictionary.
+###  Area of a square
+    Write a class Square that defines a square by: (based on 1-square.py)
 
-    - Prototype: def update_dictionary(a_dictionary, key, value):
-    - key argument will be always a string
-    value argument will be any type
-    -  If a key exists in the dictionary, the value will be replaced
-    - If a key doesn’t exist in the dictionary, it will be created
-    - You are not allowed to import any module
+    -   Private instance attribute: size
+    -   Instantiation with optional size: def __init__(self, size=0):
+        -   size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+        -   if size is less than 0, raise a ValueError exception with the message size must be >= 0
+    -   Public instance method: def area(self): that returns the current square area
+    -   You are not allowed to import any module
 
 ## Task 3
 ### Best score
