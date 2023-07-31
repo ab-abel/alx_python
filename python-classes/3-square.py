@@ -21,12 +21,13 @@ class Square:
             self.__size = value ** 2
 
     def area(self):
-        return self.__size
+        size = self.__size
+        return size
 
 
 my_square = Square(89)
 print(my_square.size)
-print(my_square.area())
-my_square.size = 33
-print(my_square.size)
-print(my_square.area())
+# print(my_square.area())
+# my_square.size = 33
+# print(my_square.size)
+# print(my_square.area())
