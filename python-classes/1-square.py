@@ -12,11 +12,11 @@ class Square:
             try:
                 raise TypeError
             except TypeError as var:
-                print("size must be an integer")
+                return "size must be an integer"
         if size<=0:
             try:
                 raise ValueError
             except ValueError as var:
-                print("size must be >= 0")
+                return "size must be >= 0"
         self.__size = size
 
