@@ -10,13 +10,12 @@ class Square:
     def __init__(self, size=0):
         if type(size) != int:
             try:
-                raise TypeError
+                raise TypeError("size must be an integer")
             except TypeError as var:
-                return "size must be an integer"
+                return var
         if size<=0:
             try:
-                raise ValueError
+                raise ValueError("size must be >= 0")
             except ValueError as var:
-                return "size must be >= 0"
+                return var
         self.__size = size
-
