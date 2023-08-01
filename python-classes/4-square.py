@@ -40,3 +40,5 @@ class Square:
                 for j in range(0, area - 1):
                     print("#", end='')
                 print("#")
+        else:
+            print()
