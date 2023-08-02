@@ -1,30 +1,20 @@
-#!/usr/bin/python3
-"""
-Module calculate the area of a square
-"""
+class Base():
 
+    __nb_instance = 0
 
-class Square:
-    """
-    this class uses the getter to return the area from
-    the square method
-    """
+    def __init__(self):
+        Base.__nb_instance += 1
+        self.id = Base.__nb_instance
 
-    def __init__(self, size=0):
-        self.__size = size
-        self.set_size(size)
-        self.size = self.get_size()
+class User(Base):
+    pass
+    def __init__(self):
+        super().__init__()
+        self.id =89
 
-    def set_size(self, value):
-        if type(value) != int:
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+# for i in range(3):
+    # b =Base()
+# b = Base()
+u = User()
 
-    def get_size(self):
-        return self.__size
-
-    def area(self):
-        return self.size ** 2
+print(u.id)
