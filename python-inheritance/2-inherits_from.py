@@ -7,8 +7,8 @@ wise return false
 
 def is_kind_of_class(obj, a_class):
     """
-    this method check if a class is a subclass of the define object
-    exam 1 is a subclass of the class int this method check if a class is a subclass of the define object
+    this method check if a class is a subclass of the define object exam 1 is a subclass of the class int this method check 
+    if a class is a subclass of the define object
     exam 1 is a subclass of the class int
     """
     if issubclass(type(obj), a_class):
