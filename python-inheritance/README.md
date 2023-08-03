@@ -1,32 +1,25 @@
-# PYTHON Class
-    Understanding python "class everything is a class"
+# PYTHON Inheritance 
+    Understanding python classes and subclass
 # ALL TASK
 
 ## Task 0
-###  square with size
-    Write a class Square that defines a square by:
-    -   Private instance attribute: size
-    -   Instantiation with size (no type/value verification)
-    -   You are not allowed to import any module
+###  Exact same object
+Write a function that returns True if the object is exactly an instance of the specified class ; otherwise False.
+
+    - Prototype: def is_same_class(obj, a_class):
+    - You are not allowed to import any module
 
 ## Task 1
-### Size validation
-Write a class Square that defines a square by: (based on 0-square.py)
+### Same class or inherit from
+Write a function that returns True if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class ; otherwise False.
 
-    -   Private instance attribute: size
-    -   Instantiation with optional size: def __init__(self, size=0):
-        -   size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
-        -   if size is less than 0, raise a ValueError exception with the message size must be >= 0
-    -   You are not allowed to import any module
+    - Prototype: def is_kind_of_class(obj, a_class):
+    - You are not allowed to import any module
 ## Task 2
-###  Area of a square
-    Write a class Square that defines a square by: (based on 1-square.py)
+###  Only sub class of
+    Write a function that returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False.
 
-    -   Private instance attribute: size
-    -   Instantiation with optional size: def __init__(self, size=0):
-        -   size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
-        -   if size is less than 0, raise a ValueError exception with the message size must be >= 0
-    -   Public instance method: def area(self): that returns the current square area
+    -   Prototype: def inherits_from(obj, a_class):
     -   You are not allowed to import any module
 
 ## Task 3
