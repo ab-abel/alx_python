@@ -10,3 +10,6 @@ class BaseGeometry:
     exam 1 is an instancce of the class int
     """
     pass
+
+# bg = BaseGeometry()
+# print(dir(bg))
