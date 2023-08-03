@@ -31,15 +31,15 @@ def is_kind_of_class(obj, a_class):
     ...    pass
     >>> ClassName()
     ...
-    >>>     pass
-    >>>     if issubclass(type(obj), a_class):
-    ...        return True
-    >>>     else:
-    ...         return False
+    >>>    pass
+    >>> if issubclass(type(obj), a_class):
+    ...   return True
+    >>> else:
+    ...   return False
 
     >>> obj = ClassName()
-    >>> is 
-`    
+    >>> 
+
     """
     if issubclass(type(obj), a_class): 
         return True #return boolean
