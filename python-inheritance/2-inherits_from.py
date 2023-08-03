@@ -7,36 +7,41 @@ The issubclass methotd takes the obj type vairable, and a_class method.
 The if compirison operator is use to check if the return value is 'true or not'
 exampel:
 
-Parameters:
-obj : any
-    THe object to be checked for its class mambership
-a_class : class
-    the class that the object membeship is to be tested against
-Returns:
-bool
-which mean its True if the obj is an instance of the class and
-false if the objet is not an instance of the class
 
->>> class ClassName(obj):
-...    pass
->>> ClassName()
-...
->>>     pass
->>>     if issubclass(type(obj), a_class):
-...        return True
->>>     else:
-...         return False
-
->>> obj = ClassName()
->>> is 
-    
 
 """
 
 
-def is_kind_of_class(obj, a_class): #Function definition
+def is_kind_of_class(obj, a_class):
+    """
+    Function to check if a data is a subclass of the other.
 
-    if issubclass(type(obj), a_class): #check using conditional 
+    This function takes two numbers, 'a' and 'b', and returns their sum.
+
+    Parameters:
+    obj (int, float, boolean, string, list): The first number.
+    a_class (could be any class or object): The second number.
+
+    Returns:
+    True or false: The output is a boolean of the comparison of the 
+    the two input variable.
+    
+    Example
+    >>> class ClassName(obj):
+    ...    pass
+    >>> ClassName()
+    ...
+    >>>     pass
+    >>>     if issubclass(type(obj), a_class):
+    ...        return True
+    >>>     else:
+    ...         return False
+
+    >>> obj = ClassName()
+    >>> is 
+`    
+    """
+    if issubclass(type(obj), a_class): 
         return True #return boolean
     else:   #coditional statement
         return False #return bool
