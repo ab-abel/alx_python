@@ -34,9 +34,9 @@ false if the objet is not an instance of the class
 """
 
 
-def is_kind_of_class(obj, a_class):
+def is_kind_of_class(obj, a_class): #Function definition
 
-    if issubclass(type(obj), a_class):
-        return True
-    else:
-        return False
+    if issubclass(type(obj), a_class): #check using conditional 
+        return True #return boolean
+    else:   #coditional statement
+        return False #return bool
