@@ -20,7 +20,7 @@ def is_kind_of_class(obj, a_class):
     bool
     which mean its True if the obj is an instance of the class and
     false if the objet is not an instance of the class
-    
+
     >>> class ClassName(obj):
     ...    pass
     >>> ClassName()
@@ -33,6 +33,7 @@ def is_kind_of_class(obj, a_class):
 
     >>> obj = ClassName()
     >>> is 
+    
     """
     if issubclass(type(obj), a_class):
         return True
