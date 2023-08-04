@@ -16,8 +16,8 @@ def is_kind_of_class(obj, a_class):
     Returns:
     True: The output if the result of the subclass check is  true
     False: If the result of the subclass is false
+    
     """
-    #   class conditional statment
     if issubclass(type(obj), a_class): 
         """
         Conditional statements
