@@ -26,7 +26,13 @@ class Rectangle(BaseGeometry, metaclass=BaseGeometryMetaClass):
         self.__height = height
     
     def __str__(self):
+        """
+        THIS mETHOD CONVERT THE OBJECT TO A READABLE STRING
+        """
         return f"[Rectangle] {self.__width}/{self.__height}"
 
     def area(self):
+        """
+        This method return the result of width * height
+        """
         return self.__width*self.__height
