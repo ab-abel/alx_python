@@ -20,7 +20,7 @@ def inherits_from(obj, a_class):
             obj and a_class
 
     '''
-    if type(obj) == a_class:
+    if subclass(type(obj),  a_class) and type(obj) == a_class:
         return True
     else:
         return False
