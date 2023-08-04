@@ -13,7 +13,10 @@ class BaseGeometry:
     """
 
     def __dir__(cls) -> None:
-
+        """
+        this method check if a class is an instance of the define object
+            exam 1 is an instancce of the class int
+        """
         attrib = super().__dir__()
         n_attri = []
         for attr in attrib:
