@@ -42,6 +42,6 @@ def is_kind_of_class(obj, a_class):
 
     """
     if issubclass(type(obj), a_class): 
-        return True #return boolean
-    else:   #coditional statement
-        return False #return bool
+        return True
+    else:
+        return False
