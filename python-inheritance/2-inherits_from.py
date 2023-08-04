@@ -20,7 +20,11 @@ def inherits_from(obj, a_class):
             obj and a_class
 
     '''
-    if issubclass(type(obj), a_class):
+    # if issubclass(type(obj), a_class):
+    #     return True
+    # else:
+    #     return False
+    if type(obj) is a_class:
         return True
     else:
         return False
