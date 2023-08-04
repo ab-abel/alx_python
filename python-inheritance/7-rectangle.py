@@ -23,8 +23,8 @@ class Rectangle(BaseGeometry, metaclass=BaseGeometryMetaClass):
         """
         initialaizatio function for base geometry
         """
-        width = BaseGeometry.integer_validator(self, "width", width)
-        height = BaseGeometry.integer_validator(self, "height", height)
+        BaseGeometry.integer_validator(self, "width", width)
+        BaseGeometry.integer_validator(self, "height", height)
         self.__width = width
         self.__height = height
 
