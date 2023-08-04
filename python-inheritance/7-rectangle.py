@@ -30,6 +30,3 @@ class Rectangle(BaseGeometry, metaclass=BaseGeometryMetaClass):
 
     def area(self):
         return self.__width/self.__height
-
-r = Rectangle(5, 5)
-print(r)
