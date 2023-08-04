@@ -9,7 +9,7 @@ def inherits_from(obj, a_class):
     '''
     Function to check if a data is a subclass of the other.
     This function takes two numbers, 'obj' and 'a_class',
-    and returns their sum.
+    and returns a bool if it was inherited from it class.
 
         Parameters:
             obj (field): The first number.
@@ -20,7 +20,7 @@ def inherits_from(obj, a_class):
             obj and a_class
 
     '''
-    if subclass(type(obj),  a_class) and type(obj) == a_class:
+    if issubclass(type(obj),  a_class):
         return True
     else:
         return False
