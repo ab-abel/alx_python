@@ -10,7 +10,7 @@ class BaseGeometry:
     exam 1 is an instancce of the class int
     """
 
-    def __dir__(cls):
+    def __dir__(cls) -> None:
 
         attrib = super().__dir__()
         n_attri = []
