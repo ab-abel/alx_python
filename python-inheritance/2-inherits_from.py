@@ -19,9 +19,15 @@ def is_kind_of_class(obj, a_class):
     """
     #   class conditional statment
     if issubclass(type(obj), a_class): 
-        #   return param
+        """
+        Conditional statements
+        """
         return True
-        #   coditional state][ment
+        """
+        Conditional statements
+        """
     else:
-        #   conditional statement
+        """
+        Conditional statements
+        """
         return False
