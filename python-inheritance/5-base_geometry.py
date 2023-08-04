@@ -30,13 +30,5 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         if type(value) != int:
             raise TypeError("name must be an integer")
-        elif value <= 0:
-            raise ValueError("name must be greater than 0".format(name))
-
-
-bg = BaseGeometry()
-
-try:
-    bg.integer_validator("name", "John")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+        elif type(value) <= 0:
+            raise ValueError("name must be greater than 0")
