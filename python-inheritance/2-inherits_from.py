@@ -22,7 +22,7 @@ def inherits_from(obj, a_class):
     '''
     # if isinstance(type(obj), a_class):
     if obj == True:
-        return True
+        return TRUE
     elif type(obj) == int:
         return False
     else:
