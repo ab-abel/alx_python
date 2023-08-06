@@ -9,6 +9,9 @@ class Base:
     the goal of the base class will be to manage
     your id in all your projects.
     '''
+    # create a class attribute to hold the count
+    __nb_objects = 0
+
     def __init__(self, id:int = None):
         '''
         Funtion instantiation for base clss
@@ -19,5 +22,11 @@ class Base:
             Returns:
                 increment self.id if id is none otherwise self id = id
         '''
-        self.__nb_objects = 0
-        self.id = id if id != None else self.__nb_objects + 1
+
+        # increament count anytime the instance is created
+        Base.__nb_objects += 1
+
+        if id != None:
+            self.id = id
+        else:
+           self.id = Base.__nb_objects
