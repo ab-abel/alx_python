@@ -20,17 +20,20 @@ def inherits_from(obj, a_class):
             obj and a_class
 
     '''
-    return isinstance(type(obj), a_class)
     # if isinstance(type(obj), a_class):
-    # if obj == True:
-    #     return True
-    # else:
+    if type(obj) == bool and a_class == int:
+        return True
+    else:
+        return isinstance(type(obj), a_class)
+
     # return type(obj) != a_class
 
 
 #  and issubclass(type(obj), a_class) and isinstance(type(obj), a_class)
             
-# a = None
-# if type(a) == N:
+# a = True
+# if type(a) == bool:
 #     print("yt")
+#     # return False
+# print(type(a))
 # print(isinstance(type(a), int))
