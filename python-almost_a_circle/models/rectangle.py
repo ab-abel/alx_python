@@ -2,8 +2,8 @@
     This is the first Rectangle that 
     inherits from Base Module
 '''
-from models.base import Base
-# from base import Base
+# from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     '''
@@ -259,8 +259,9 @@ class Rectangle(Base):
         Return:
             square matrix of #
         '''  
-        self.id = arg1 
-        self._Rectangle__width = arg2
-        self._Rectangle__height = arg3
-        self._Rectangle__x = args4
-        self.Rectangle__y = arg5
+        for arg in args:
+            self.id = arg 
+            self._Rectangle__width = arg
+            self._Rectangle__height = arg
+            self._Rectangle__x = arg
+            self.Rectangle__y = arg
