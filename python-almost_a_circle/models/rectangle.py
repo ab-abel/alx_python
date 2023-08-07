@@ -268,6 +268,7 @@ class Rectangle(Base):
                 self._Rectangle__y = arg
         else:
             for key, value in kwargs.items():
+                self.id = kwargs.get('id')
                 self._Rectangle__x = kwargs.get('x')
                 self._Rectangle__y = kwargs.get('y')
                 self._Rectangle__width = kwargs.get('width')
