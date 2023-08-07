@@ -95,15 +95,15 @@ class Rectangle(Base):
         Return:
             return the height param from the private property
         '''
-        return self._Rectangle__width
+        return self._Rectangle__height
     
     @height.setter
-    def height(self, width):
+    def height(self, height):
         '''
         Return:
            Set the height private property attributes field.
         '''
-        self._Rectangle__width = width
+        self._Rectangle__height = height
 
     @property
     def Rectangle__x(self):
@@ -127,15 +127,15 @@ class Rectangle(Base):
         Return:
             return the x param from the private property
         '''
-        return self._Rectangle__width
+        return self._Rectangle__x
     
     @x.setter
-    def x(self, width):
+    def x(self, x):
         '''
         Return:
            Set the x private property attributes field.
         '''
-        self._Rectangle__width = width
+        self._Rectangle__x = x
 
     @property
     def Rectangle__y(self):
@@ -159,12 +159,12 @@ class Rectangle(Base):
         Return:
             return the y param from the private property
         '''
-        return self._Rectangle__width
+        return self._Rectangle__y
     
     @y.setter
-    def y(self, width):
+    def y(self, y):
         '''
         Return:
            Set the y private property attributes field.
         '''
-        self._Rectangle__width = width
+        self._Rectangle__y = y
