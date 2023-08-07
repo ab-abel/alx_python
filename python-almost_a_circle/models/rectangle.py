@@ -235,10 +235,10 @@ class Rectangle(Base):
 
         # print a square matrix from x and y
         for i in range(y): # write the top space
-            print("x" * y, end = '\n')
+            print(" " * y, end = '\n')
         for i in range(height): # row
             for j in range(x):  # write the column white space
-                print("y", end = '')
+                print(" ", end = '')
             for j in range(width-1): #column
                 print("#", end = "")
             print("#")
