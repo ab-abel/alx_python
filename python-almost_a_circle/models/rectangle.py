@@ -259,7 +259,7 @@ class Rectangle(Base):
         Return:
             square matrix of #
         '''
-        if args is not None:
+        if args:
             for arg in args:
                 self.id = arg 
                 self._Rectangle__width = arg
