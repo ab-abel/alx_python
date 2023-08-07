@@ -181,11 +181,13 @@ class Rectangle(Base):
             exception: Typeerror, ValueError or Pass if test is 
             successful
         '''
-        if(type(param)!= int):
+        if(type(param) != int):
             raise TypeError("{} must be an integer".format(name))
-            if(name not in ['x','y']):
-                if(param <= 0):
-                    raise ValueError("{} must be > 0".format(name))
-            elif(name == 'x' or name == 'y'):
-                if(param < 0):
-                    raise ValueError("{} must be >= 0".format(name))
+        elif(type(name) != str):
+            raise ValueError("{} name must be a str".format(name))
+        elif(name not in ['x','y']):
+            if(param <= 0):
+                raise ValueError("{} must be > 0".format(name))
+        elif(name == 'x' or name == 'y'):
+            if(param < 0):
+                raise ValueError("{} must be >= 0".format(name))
