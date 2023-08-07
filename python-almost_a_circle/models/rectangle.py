@@ -250,7 +250,15 @@ class Rectangle(Base):
             print("#")
 
         #   Update for class python
-        def Update(self, *args):
+        def update(self, *args):
+            '''
+            This function return a square matrix of # for anyinput of x and y
+
+            Paramter:
+                self:
+            Return:
+                square matrix of #
+            '''  
             self.id = arg1 
             self._Rectangle__width = arg2
             self._Rectangle__height = arg3
