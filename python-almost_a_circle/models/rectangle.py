@@ -169,7 +169,7 @@ class Rectangle(Base):
         '''
         self._Rectangle__y = y
 
-    def validation(self, name:str, param):
+    def validation(self, name:str, param:int):
         '''
         Validation method 
 
@@ -181,10 +181,10 @@ class Rectangle(Base):
             exception: Typeerror, ValueError or Pass if test is 
             successful
         '''
-        if(name not in ['x','y']):
-            if(type(param)!= int):
-                raise TypeError("{} must be an integer".format(name))
-            elif(param <= 0):
-                raise ValueError("{} must be > 0".format(name))
-        elif(param < 0):
-            raise ValueError("{} must be >= 0".format(name))
+        if(type(param)!= int):
+            raise TypeError("{} must be an integer".format(name))
+            if(name not in ['x','y']):
+                if(param <= 0):
+                    raise ValueError("{} must be > 0".format(name))
+            elif(param < 0):
+                raise ValueError("{} must be >= 0".format(name))
