@@ -29,10 +29,10 @@ class Rectangle(Base):
             The return param will be
 
         '''
-        self._Rectangle__width = self.validation('width', width)
-        self._Rectangle__height = self.validation('height',height)
-        self._Rectangle__x = self.validation('x',x)
-        self._Rectangle__y = self.validation('y',y)
+        self._Rectangle__width = self.validation(self, 'width', width)
+        self._Rectangle__height = self.validation(self, 'height',height)
+        self._Rectangle__x = self.validation(self,'x',x)
+        self._Rectangle__y = self.validation(self, 'y',y)
         super().__init__(id)
 
     #   @property decorator. This method allows us to
@@ -169,7 +169,7 @@ class Rectangle(Base):
         '''
         self._Rectangle__y = y
 
-    def validation(name:str, param):
+    def validation(self, name:str, param):
         '''
         Validation method 
 
