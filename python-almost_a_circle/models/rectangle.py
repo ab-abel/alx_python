@@ -47,7 +47,7 @@ class Rectangle(Base):
         The string method takes the object and return a readable
         format 
         '''
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self._Rectangle__x,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
             self._Rectangle__x, self._Rectangle__y, self._Rectangle__width,
                 self._Rectangle__height)
 
