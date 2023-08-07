@@ -234,10 +234,10 @@ class Rectangle(Base):
         y = self.Rectangle__y
 
         # print a square matrix from x and y
-        for i in range(y):
+        for i in range(y): # write the top space
             print(" " * y, end = '\n')
-        for i in range(0, height): #row
-            for j in range(x):
+        for i in range(0, height): # row
+            for j in range(x):  # write the column white space
                 print(" ", end = '')
             for j in range(0, width-1): #column
                 print("#", end = "")
