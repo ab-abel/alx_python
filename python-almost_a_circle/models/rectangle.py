@@ -235,11 +235,11 @@ class Rectangle(Base):
 
         # print a square matrix from x and y
         for i in range(y): # write the top space
-            print(" " * y, end = '\n')
-        for i in range(0, height): # row
+            print("x" * y, end = '\n')
+        for i in range(height): # row
             for j in range(x):  # write the column white space
-                print(" ", end = '')
-            for j in range(0, width-1): #column
+                print("y", end = '')
+            for j in range(width-1): #column
                 print("#", end = "")
             print("#")
         # Add a display for the x and y value
