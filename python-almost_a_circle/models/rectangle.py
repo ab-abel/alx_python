@@ -42,6 +42,16 @@ class Rectangle(Base):
         self._Rectangle__y = y
         super().__init__(id)
 
+    def __str__(self):
+        '''
+        The string method takes the object and return a readable
+        format 
+        '''
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self._Rectangle__x,
+            self._Rectangle__x, self._Rectangle__y, self._Rectangle__width,
+                self._Rectangle__height)
+
+
     #   @property decorator. This method allows us to
     #   access the private attribute as if it
     #   were a regular attribute, using obj.private_attribute
