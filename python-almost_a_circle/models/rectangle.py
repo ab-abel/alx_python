@@ -191,3 +191,13 @@ class Rectangle(Base):
         elif(name == 'x' or name == 'y'):
             if(param < 0):
                 raise ValueError("{} must be >= 0".format(name))
+
+    def area(self):
+        '''
+        THis method return the area of the the rectangle
+        PArameters:
+            self
+        Return:
+            the prpduct of height and width
+        '''
+        return self._Rectangle__height * self._Rectangle__width
