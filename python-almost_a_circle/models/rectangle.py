@@ -20,87 +20,87 @@ class Rectangle(Base):
         Class construtuctor for the clas rectangle
 
         Parameters:
-            width:
-            height:
+            width: supplied at instatiation
+            height: supplied at instatiation
             x:  default = 0
             y:  default = 0
             id: default = None, inherited from Base class
         Return:
-            The return param will be 
+            The return param will be
 
         '''
-        self.__width    = self.width(width)
-        self.__height   = self.height(height)
-        self.__x        = self.x(x)
-        self.__y        = self.y(y)
-        self.id = super().id
-    
-    #   @property decorator. This method allows us to 
-    #   access the private attribute as if it 
+        self._Rectangle__width = width
+        self._Rectangle__height = height
+        self._Rectangle__x = x
+        self._Rectangle__y = y
+        super().__init__(id)
+
+    #   @property decorator. This method allows us to
+    #   access the private attribute as if it
     #   were a regular attribute, using obj.private_attribute
     @property
-    def width(self):
+    def Rectangle__width(self):
         '''
         Return:
             return the width param from the private property
         '''
-        return self.__width
-    
-    #    This method allows us to set the private attribute's 
-    #    value with validation or additional logi
-    @width.setter
-    def width(self, width):
+        return self._Rectangle__width
+
+    #    This method allows us to set the private attribute's
+    #    value with validation or additional logic
+    @Rectangle__width.setter
+    def Rectangle__width(self, width):
         '''
         Return:
            Set the width private property attributes field.
         '''
-        self.__width = width
+        self._Rectangle__width = width
 
     @property
-    def height(self):
+    def Rectangle__height(self):
         '''
         Return:
             return the height param from the private property
         '''
-        return self.__height
-    
-    @height.setter
-    def height(self, height):
+        return self._Rectangle__height
+
+    @Rectangle__height.setter
+    def Rectangle__height(self, height):
         '''
         Return:
            Set the height private property attributes field.
         '''
-        self.__height = height
+        self._Rectangle__height = height
 
 
     @property
-    def x(self):
+    def Rectangle__x(self):
         '''
         Return:
             return the x param from the private property
         '''
-        return self.__x
-    
-    @x.setter
-    def x(self, x):
+        return self._Rectangle__x
+
+    @Rectangle__x.setter
+    def Rectangle__x(self, x):
         '''
         Return:
            Set the x private property attributes field.
         '''
-        self.__x = x
+        self._Rectangle__x = x
 
     @property
-    def y(self):
+    def Rectangle__y(self):
         '''
         Return:
             return the x param from the private property
         '''
         return self.__y
-    
-    @y.setter
-    def y(self, y):
+
+    @Rectangle__y.setter
+    def Rectangle__y(self, y):
         '''
         Return:
            Set the y private property attributes field.
         '''
-        self.__y = y
+        self._Rectangle__y = y
