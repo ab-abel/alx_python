@@ -186,5 +186,6 @@ class Rectangle(Base):
             if(name not in ['x','y']):
                 if(param <= 0):
                     raise ValueError("{} must be > 0".format(name))
-            elif(param < 0):
-                raise ValueError("{} must be >= 0".format(name))
+            elif(name == 'x' or name == 'y'):
+                if(param < 0):
+                    raise ValueError("{} must be >= 0".format(name))
