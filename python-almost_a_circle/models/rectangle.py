@@ -186,6 +186,8 @@ class Rectangle(Base):
         '''
         self._Rectangle__y = self.validation('y', y)
 
+    #   validation class for Rectangle
+
     def validation(self, name:str, param:int):
         '''
         Validation method 
@@ -209,6 +211,8 @@ class Rectangle(Base):
             if(param < 0):
                 raise ValueError("{} must be >= 0".format(name))
 
+    #   Area calculatore for Rectangle class
+
     def area(self):
         '''
         THis method return the area of the the rectangle
@@ -218,6 +222,8 @@ class Rectangle(Base):
             the prpduct of height and width
         '''
         return self._Rectangle__height * self._Rectangle__width
+
+    #  Display method for python class Rectangle
 
     def display(self):
         '''
@@ -242,4 +248,11 @@ class Rectangle(Base):
             for j in range(width-1): #column
                 print("#", end = "")
             print("#")
-        # Add a display for the x and y value
+
+        #   Update for class python
+        def Update(self, *args):
+            self.id = arg1 
+            self._Rectangle__width = arg2
+            self._Rectangle__height = arg3
+            self._Rectangle__x = args4
+            self.Rectangle__y = arg5
