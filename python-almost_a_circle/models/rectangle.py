@@ -54,7 +54,7 @@ class Rectangle(Base):
         Return:
            Set the width private property attributes field.
         '''
-        self._Rectangle__width = width
+        self._Rectangle__width = self.validation('width', width)
 
     @property
     def width(self):
@@ -70,7 +70,7 @@ class Rectangle(Base):
         Return:
            Set the width private property attributes field.
         '''
-        self._Rectangle__width = width
+        self._Rectangle__width = self.validation('width', width)
 
 
     @property
@@ -87,7 +87,7 @@ class Rectangle(Base):
         Return:
            Set the height private property attributes field.
         '''
-        self._Rectangle__height = height
+        self._Rectangle__height = self.validation('height', height)
 
     @property
     def height(self):
@@ -103,7 +103,7 @@ class Rectangle(Base):
         Return:
            Set the height private property attributes field.
         '''
-        self._Rectangle__height = height
+        self._Rectangle__height = self.validation('height', height)
 
     @property
     def Rectangle__x(self):
@@ -119,7 +119,7 @@ class Rectangle(Base):
         Return:
            Set the x private property attributes field.
         '''
-        self._Rectangle__x = x
+        self._Rectangle__x = self.validation('x', x)
 
     @property
     def x(self):
@@ -135,7 +135,7 @@ class Rectangle(Base):
         Return:
            Set the x private property attributes field.
         '''
-        self._Rectangle__x = x
+        self._Rectangle__x = self.validation('x', x)
 
     @property
     def Rectangle__y(self):
@@ -151,7 +151,7 @@ class Rectangle(Base):
         Return:
            Set the y private property attributes field.
         '''
-        self._Rectangle__y = y
+        self._Rectangle__y = self.validation('y', y)
 
     @property
     def y(self):
@@ -167,7 +167,7 @@ class Rectangle(Base):
         Return:
            Set the y private property attributes field.
         '''
-        self._Rectangle__y = y
+        self._Rectangle__y = self.validation('y', y)
 
     def validation(self, name:str, param:int):
         '''
