@@ -3,7 +3,7 @@
     inherits from Base Module
 '''
 from models.base import Base
-
+# from base import Base
 
 class Rectangle(Base):
     '''
@@ -29,10 +29,10 @@ class Rectangle(Base):
             The return param will be
 
         '''
-        self._Rectangle__width = width
-        self._Rectangle__height = height
-        self._Rectangle__x = x
-        self._Rectangle__y = y
+        self._Rectangle__width = self.validation('width', width)
+        self._Rectangle__height = self.validation('height',height)
+        self._Rectangle__x = self.validation('x',x)
+        self._Rectangle__y = self.validation('y',y)
         super().__init__(id)
 
     #   @property decorator. This method allows us to
@@ -168,3 +168,13 @@ class Rectangle(Base):
            Set the y private property attributes field.
         '''
         self._Rectangle__y = y
+
+    def validation(name:str, param):
+        if(name not in ['x','y']):
+            if(type(param)!= int):
+                raise TypeError("{} must be an integer".format(name))
+            elif(param <= 0):
+                raise ValueError("{} must be > 0".format(name))
+        elif(param < 0):
+            raise ValueError("{} must be >= 0".format(name))
+            
