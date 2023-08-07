@@ -222,8 +222,7 @@ class Rectangle(Base):
         y = self._Rectangle__height
 
         # print a square matrix from x and y
-        for i in range(0, x):
-            for j in range(0, y-1):
+        for i in range(0, y):
+            for j in range(0, x-1):
                 print("#", end="")
             print("#")
-
