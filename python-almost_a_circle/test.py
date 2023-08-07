@@ -9,5 +9,10 @@ def create_square_display_with_spaces(size):
             print()
 
 # Change the value of 'size' to adjust the size of the square display
-size = 5
-create_square_display_with_spaces(size)
+# size = 5
+# create_square_display_with_spaces(size)
+
+
+
+r = Rectangle(10, 12, 2, 1)
+r.display()

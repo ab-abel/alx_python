@@ -2,8 +2,8 @@
     This is the first Rectangle that 
     inherits from Base Module
 '''
-from models.base import Base
-# from base import Base
+# from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     '''
@@ -237,7 +237,7 @@ class Rectangle(Base):
         for i in range(y): # write the top space
             print(" " * y, end = '\n')
         for i in range(height): # row
-            for j in range(x):  # write the column white space
+            for j in range(x-1):  # write the column white space
                 print(" ", end = '')
             for j in range(width-1): #column
                 print("#", end = "")
