@@ -2,8 +2,8 @@
     This is the first Rectangle that 
     inherits from Base Module
 '''
-from models.base import Base
-# from base import Base
+# from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     '''
@@ -234,12 +234,12 @@ class Rectangle(Base):
         y = self.Rectangle__y
 
         # print a square matrix from x and y
-        for i in range(0, height):
-            for j in range(0, width-1):
-                print("#", end="")
+        for i in range(y):
+            print(" " * y, end = '\n')
+        for i in range(0, height): #row
+            for j in range(x):
+                print(" ", end = '')
+            for j in range(0, width-1): #column
+                print("#", end = "")
             print("#")
         # Add a display for the x and y value
-        # for i in range(0, y):
-        #     for j in range(0, x-1):
-        #         print("#", end="")
-        #     print("#")
