@@ -264,4 +264,4 @@ class Rectangle(Base):
             self._Rectangle__width = arg
             self._Rectangle__height = arg
             self._Rectangle__x = arg
-            self.Rectangle__y = arg
+            self._Rectangle__y = arg
