@@ -29,10 +29,17 @@ class Rectangle(Base):
             The return param will be
 
         '''
-        self._Rectangle__width = self.validation('width', width)
-        self._Rectangle__height = self.validation('height',height)
-        self._Rectangle__x = self.validation('x',x)
-        self._Rectangle__y = self.validation('y',y)
+        # validate each param
+        self.validation('width', width)
+        self.validation('height',height)
+        self.validation('x',x)
+        self.validation('y',y)
+
+        # set each param after validation
+        self._Rectangle__width = width
+        self._Rectangle__height = height
+        self._Rectangle__x = x
+        self._Rectangle__y = y
         super().__init__(id)
 
     #   @property decorator. This method allows us to
