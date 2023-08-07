@@ -228,10 +228,17 @@ class Rectangle(Base):
         Return:
             square matrix of #
         '''
-        x = self._Rectangle__width
-        y = self._Rectangle__height
+        width = self._Rectangle__width
+        height = self._Rectangle__height
+        x = self.Rectangle__x
+        y = self.Rectangle__y
 
         # print a square matrix from x and y
+        for i in range(0, height):
+            for j in range(0, width-1):
+                print("#", end="")
+            print("#")
+        # Add a display for the x and y value
         for i in range(0, y):
             for j in range(0, x-1):
                 print("#", end="")
