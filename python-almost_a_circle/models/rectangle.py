@@ -208,3 +208,22 @@ class Rectangle(Base):
             the prpduct of height and width
         '''
         return self._Rectangle__height * self._Rectangle__width
+
+    def display(self):
+        '''
+        This function return a square matrix of # for anyinput of x and y
+
+        Paramter:
+            self:
+        Return:
+            square matrix of #
+        '''
+        x = self._Rectangle__width
+        y = self._Rectangle__height
+
+        # print a square matrix from x and y
+        for i in range(0, x):
+            for j in range(0, y-1):
+                print("#", end="")
+            print("#")
+
