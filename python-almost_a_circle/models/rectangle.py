@@ -170,6 +170,17 @@ class Rectangle(Base):
         self._Rectangle__y = y
 
     def validation(name:str, param):
+        '''
+        Validation method 
+
+        Parameters:
+            Name: str name of param to be vailidated. example x
+            Param: int, the value to be valitade must be int at
+            all time
+        Return:
+            exception: Typeerror, ValueError or Pass if test is 
+            successful
+        '''
         if(name not in ['x','y']):
             if(type(param)!= int):
                 raise TypeError("{} must be an integer".format(name))
