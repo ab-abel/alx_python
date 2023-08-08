@@ -2,8 +2,8 @@
     This is the first Rectangle that 
     inherits from Base Module
 '''
-# from models.base import Base
-from base import Base
+from models.base import Base
+# from base import Base
 
 class Rectangle(Base):
     '''

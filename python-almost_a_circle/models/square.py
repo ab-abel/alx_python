@@ -3,8 +3,8 @@ This class implement the square method based and also inherit from the
 Rectanngle class we previously built
 '''
 
-from rectangle import Rectangle
-# from models.rectangle import Rectangle
+# from rectangle import Rectangle
+from models.rectangle import Rectangle
 # 
 
 class Square(Rectangle):
@@ -19,14 +19,23 @@ class Square(Rectangle):
         super().__init__(width=size,height=size, x=x,y=y, id=id)
         
     def __str__(self):
+        '''
+        This method convert the objects to strings
+        '''
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
+        '''
+        This method is defined to get te size of the object
+        '''
         return super().width
 
     @size.setter
     def size(self, size):
+        '''
+        THis is a setter method for size
+        '''
         Rectangle.validation(self, 'width', size)
         super().width = size
         super().height = size
