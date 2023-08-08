@@ -28,7 +28,7 @@ class Square(Rectangle):
         '''
         This method is defined to get te size of the object
         '''
-        return super().width
+        return super().Rectangle__width
 
     @size.setter
     def size(self, size):
@@ -36,5 +36,4 @@ class Square(Rectangle):
         THis is a setter method for size
         '''
         Rectangle.validation(self, 'width', size)
-        super().width = size
-        super().height = size
+        super().__init__(size, size)
