@@ -16,3 +16,5 @@ class Square(Rectangle):
         instantation of the square class
         '''
         super().__init__(width=size,height=size, x=x,y=y, id=id)
+    def __str__(self):
+        return f"[Square] ({super().id}) {super()._Rectangle__x}/{super()._Rectangle__y} - {size}"
