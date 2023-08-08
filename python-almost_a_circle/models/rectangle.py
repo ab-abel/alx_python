@@ -268,8 +268,8 @@ class Rectangle(Base):
                 self._Rectangle__y = arg
         else:
             for key, value in kwargs.items():
-                self.id = kwargs.get('id')
-                self._Rectangle__x = kwargs.get('x')
-                self._Rectangle__y = kwargs.get('y')
-                self._Rectangle__width = kwargs.get('width')
-                self._Rectangle__height = kwargs.get('height')
+                self.id = kwargs.get('id') if 'id' in kwargs else self.id
+                self._Rectangle__x = kwargs.get('x') if 'x' in kwargs else self.Rectangle__x
+                self._Rectangle__y = kwargs.get('y') if 'y' in kwargs else self.Rectangle__y
+                self._Rectangle__width = kwargs.get('width') if 'width' in kwargs else self.Rectangle__width
+                self._Rectangle__height = kwargs.get('height') if 'height' in kwargs else self.Rectangle__height
