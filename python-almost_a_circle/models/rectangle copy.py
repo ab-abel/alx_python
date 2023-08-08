@@ -2,8 +2,8 @@
     This is the first Rectangle that 
     inherits from Base Module
 '''
-from models.base import Base
-# from base import Base
+# from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     '''
@@ -71,8 +71,7 @@ class Rectangle(Base):
         Return:
            Set the width private property attributes field.
         '''
-        self.validation('width', width)
-        self._Rectangle__width = width
+        self._Rectangle__width = self.validation('width', width)
 
     @property
     def width(self):
@@ -88,8 +87,7 @@ class Rectangle(Base):
         Return:
            Set the width private property attributes field.
         '''
-        self.validation('width', width)
-        self._Rectangle__width = width
+        self._Rectangle__width = self.validation('width', width)
 
 
     @property
@@ -106,8 +104,7 @@ class Rectangle(Base):
         Return:
            Set the height private property attributes field.
         '''
-        self.validation('height', height)
-        self._Rectangle__height = height
+        self._Rectangle__height = self.validation('height', height)
 
     @property
     def height(self):
@@ -123,8 +120,7 @@ class Rectangle(Base):
         Return:
            Set the height private property attributes field.
         '''
-        self.validation('height', height)
-        self._Rectangle__height = height
+        self._Rectangle__height = self.validation('height', height)
 
     @property
     def Rectangle__x(self):
@@ -140,8 +136,7 @@ class Rectangle(Base):
         Return:
            Set the x private property attributes field.
         '''
-        self.validation('x', x)
-        self._Rectangle__x = x
+        self._Rectangle__x = self.validation('x', x)
 
     @property
     def x(self):
@@ -173,8 +168,7 @@ class Rectangle(Base):
         Return:
            Set the y private property attributes field.
         '''
-        self.validation('y', y)
-        self._Rectangle__y = y
+        self._Rectangle__y = self.validation('y', y)
 
     @property
     def y(self):
@@ -279,3 +273,29 @@ class Rectangle(Base):
                 self._Rectangle__y = kwargs.get('y') if 'y' in kwargs else self.Rectangle__y
                 self._Rectangle__width = kwargs.get('width') if 'width' in kwargs else self.Rectangle__width
                 self._Rectangle__height = kwargs.get('height') if 'height' in kwargs else self.Rectangle__height
+
+
+r = Rectangle(12, 14, 4, 5, 10)
+if r is None:
+    print("Can't create Rectangle")
+    exit(1)
+
+if r._Rectangle__width != 12:
+    print("Wrong private width: {}".format(r._Rectangle__width))
+    exit(1)
+
+if r.width != 12:
+    print("Wrong width getter: {}".format(r._Rectangle__width))
+    exit(1)
+
+r.width = 5
+
+if r._Rectangle__width != 5:
+    print("Wrong private width: {}".format(r._Rectangle__width))
+    exit(1)
+
+if r.width != 5:
+    print("Wrong width getter: {}".format(r._Rectangle__width))
+    exit(1)
+
+print("OK", end="")
