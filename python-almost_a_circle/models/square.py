@@ -3,8 +3,8 @@ This class implement the square method based and also inherit from the
 Rectanngle class we previously built
 '''
 
-# from rectangle import Rectangle
-from models.rectangle import Rectangle
+from rectangle import Rectangle
+# from models.rectangle import Rectangle
 # 
 
 class Square(Rectangle):
@@ -15,7 +15,7 @@ class Square(Rectangle):
         '''
         instantation of the square class
         '''
-        self.size = size
+        # self.size = size
         super().__init__(width=size,height=size, x=x,y=y, id=id)
         
     def __str__(self):
@@ -23,10 +23,10 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return Rectangle.width
+        return super().width
 
     @size.setter
     def size(self, size):
-        Rectangle.validation(self,'size', size)
-        Rectangle.width = size
-        Rectangle.height = size
+        Rectangle.validation(self, 'width', size)
+        super().width = size
+        super().height = size
