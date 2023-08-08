@@ -157,7 +157,8 @@ class Rectangle(Base):
         Return:
            Set the x private property attributes field.
         '''
-        self._Rectangle__x = self.validation('x', x)
+        self.validation('x', x)
+        self._Rectangle__x = x
 
     @property
     def Rectangle__y(self):
@@ -190,7 +191,8 @@ class Rectangle(Base):
         Return:
            Set the y private property attributes field.
         '''
-        self._Rectangle__y = self.validation('y', y)
+        self.validation('y', y)
+        self._Rectangle__y = y
 
     #   validation class for Rectangle
 
