@@ -15,7 +15,6 @@ class Square(Rectangle):
         '''
         instantation of the square class
         '''
-        # self.size = size
         super().__init__(width=size,height=size, x=x,y=y, id=id)
         
     def __str__(self):
