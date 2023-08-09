@@ -12,7 +12,6 @@ def post_email(email):
     response = requests.post(email[1], email[2])
     print("Your email is: {}".format(response.text))
 
-    # respons
     
 
 if __name__ == "__main__":
