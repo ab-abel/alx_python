@@ -6,9 +6,13 @@ import requests
 
 def post_email(email):
     '''
-    request Url and return the headers X_request-id
+    this function takes a sys input and return the email body
     '''
-    print("Your email is: {}".format(email[2]))
+
+    response = requests.post(email[1], email[2])
+    print("Your email is: {}".format(response.text))
+
+    # respons
 
 if __name__ == "__main__":
     cmd_input = []
