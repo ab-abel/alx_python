@@ -9,5 +9,5 @@ req = requests.get("https://alu-intranet.hbtn.io/status")
 
 
 print("Body response:")
-print("- type: {}".format(type(req.text)))
-print("- content: {}".format(req.text))
+print("         - type: {}".format(type(req.text)))
+print("         - content: {}".format(req.text))
