@@ -6,6 +6,4 @@ import requests
 
 
 req = requests.get("https://alu-intranet.hbtn.io/status")
-print("Body response:")
-print("        - type: {}".format(type(req.text)))
-print("        - content: {}".format(req.text))
+print("Body response:\n        - type: {}\n        - content: {}".format(type(req.text),req.text))
