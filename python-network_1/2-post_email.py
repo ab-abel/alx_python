@@ -17,7 +17,14 @@ Return:
 
 '''
 cmd_input = []
-for i in range(0, len(sys.argv)):
-    cmd_input.append(str(sys.argv[i]))
-response = requests.post(cmd_input[1], cmd_input[2])
-print("Your email is: {}".format(response.text))
+
+try:
+    for i in range(0, len(sys.argv)):
+        cmd_input.append(str(sys.argv[i]))
+    data = {
+        'email':cmd_input[2]
+    }
+    response = requests.post(cmd_input[1], data=data )
+    print("{}".format(response.text))
+except:
+    print(None)
