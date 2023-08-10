@@ -16,9 +16,8 @@ Return:
     return: the text response.
 
 '''
-url = sys.argv[1]
-url_to_str = "{}".format(url)
-req = requests.get(url_to_str)
+
+req = requests.get(str(sys.argv[1]))
 if req.status_code == 200:
     print(req.text)
 elif req.status_code >= 400:

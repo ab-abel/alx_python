@@ -36,7 +36,6 @@ Return:
     request headers x-request-Id
 '''
 
-url = str(sys.argv[1])
-url_to_str = "{}".format(url)
-req = requests.get(url_to_str)
+# The 
+req = requests.get(str(sys.argv[1]))
 print(req.headers["X-Request-Id"])
