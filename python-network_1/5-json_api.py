@@ -12,9 +12,11 @@ url = "http://0.0.0.0:5000/search_user"
 
 
 
-data = {'q':str(sys.argv[1])}
+q = {
+    'q':str(sys.argv[1])
+}
     
-req = requests.post(url, json=data)
+req = requests.post(url, json=q)
 if req.status_code == 200:
     result = req.text
     print("{}".format(result))
