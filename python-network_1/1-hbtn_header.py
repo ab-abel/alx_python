@@ -39,8 +39,9 @@ Return:
 
 import sys
 import requests
-response = requests.get(str(sys.argv[1]))
-if(response.headers is not None):
+
+try:
+    response = requests.get(str(sys.argv[1]))
     print(response.headers['X-Request-Id'])
-elif('X-Request-Id'.islower()):
+except:
     print(None)
