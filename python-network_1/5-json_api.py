@@ -13,11 +13,10 @@ url = "http://0.0.0.0:5000/search_user"
 
 
 # print()
-# q = {
-#     'q':str(sys.argv[1])
+kwargs = {q : str(sys.argv[1])}
 # }
     
-req = requests.post(url, q=sys.argv[1])
+req = requests.post(url, **kwargs)
 print(req)
 # if req.status_code == 200:
 #     result = req.text
