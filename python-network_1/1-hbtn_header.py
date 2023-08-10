@@ -17,7 +17,7 @@ Basic Usage:
     >>> requests.get(sys.argv)
     >>> return header information
     >>> using response.headers[''x-id]
-    >>> dispaly using print
+    >>> display using print
 
 Example:
 
@@ -37,6 +37,7 @@ Return:
     request headers x-request-Id
 '''
 
-# The 
+import sys
+import requests
 req = requests.get(str(sys.argv[1]))
 print(req.headers["X-Request-Id"])
