@@ -24,7 +24,7 @@ else:
 req = requests.post(url, json=q)
 if req.status_code == 200:
     result = req.json()
-    print("[{}] {}".format(result.id,result.name))
+    print(" {}".format(result))
 else:
     print("No result")
     
