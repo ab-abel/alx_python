@@ -11,13 +11,14 @@ request Url and return the headers X_request-id
 url = "http://0.0.0.0:5000/search_user"
 
 
-letter = str(sys.argv[1])
-if letter:
-    data = {'q' : letter}
-else:
-    data = {'q':""}
+
 
 try:
+    letter = str(sys.argv[1])
+    if letter:
+        data = {'q' : letter}
+    else:
+        data = {'q':""}
     req = requests.post(url, data = data)
     res_json = req.json()
     if isinstance(res_json, (dict,list)):
