@@ -39,5 +39,5 @@ Return:
 
 import sys
 import requests
-req = requests.get(str(sys.argv[1]))
-print(req.headers["X-Request-Id"])
+response = requests.get(str(sys.argv[1]))
+print(response.headers['X-Request-Id'])
