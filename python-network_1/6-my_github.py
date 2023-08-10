@@ -23,4 +23,4 @@ if response.status_code == 200:
     user_id = user_data['id']
     print(f"{user_id}")
 else:
-    print("f error: {response.status_code}")
+    print(None)
