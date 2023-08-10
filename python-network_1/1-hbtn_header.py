@@ -40,4 +40,7 @@ Return:
 import sys
 import requests
 response = requests.get(str(sys.argv[1]))
-print(response.headers['X-Request-Id'])
+if(response.status_code == 200):
+    print(response.headers['X-Request-Id'])
+else:
+    print(None)
