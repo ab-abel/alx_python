@@ -42,5 +42,5 @@ import requests
 response = requests.get(str(sys.argv[1]))
 if(response.headers is not None):
     print(response.headers['X-Request-Id'])
-else:
+elif('X-Request-Id'.islower()):
     print(None)
