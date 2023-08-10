@@ -16,10 +16,10 @@ url = "http://0.0.0.0:5000/search_user"
 try:
     letter = str(sys.argv[1])
     if letter:
-        data = {'q' : letter}
+        q=letter
     else:
-        data = {'q':""}
-    req = requests.post(url, data = data)
+        q=''
+    req = requests.post(url, q=q)
     res_json = req.json()
     if isinstance(res_json, (dict,list)):
         print("[{}] {}".format(res_json.id, res_json.name))
