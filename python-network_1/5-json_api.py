@@ -22,7 +22,7 @@ try:
     req = requests.post(url, q=q)
     # print("[{}] {}".format(req.text))
 
-    print(req.json())
+    print(req.json)
     # if isinstance(res_json, (dict,list)):
     #     print("[{}] {}".format(res_json.id, res_json.name))
     # elif res_json is None:
