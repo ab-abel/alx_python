@@ -1,24 +1,25 @@
 '''
-    This is a python script that takse URL and send a request to the URL,
-    The value of this variable is different for each request.
-
+This is a python script that takse URL and send a request to the URL,
+The value of this variable is different for each request.
 '''
 import sys
 import requests
 
+
 '''
-    Import:
-        sys, requests
+This function return the url or str 
+Import:
+    sys, requests
 
-    Parameters:
+Parameters:
 
-        url - url of the requested page gotten from sys
-        url_to_str - return a str from the url list
-        req - get request to the specified url
-    
-    Return:
+    url - url of the requested page gotten from sys
+    url_to_str - return a str from the url list
+    req - get request to the specified url
 
-        request headers x-request-Id
+Return:
+
+    request headers x-request-Id
 '''
 url = str(sys.argv[1])
 url_to_str = "{}".format(url)
