@@ -2,6 +2,11 @@
     This is a python script that takse URL and send a request to the URL,
     The value of this variable is different for each request.
 
+'''
+import sys
+import requests
+
+'''
     Import:
         sys, requests
 
@@ -14,12 +19,6 @@
     Return:
 
         request headers x-request-Id
-'''
-import sys
-import requests
-
-'''
-    url request or call 
 '''
 url = str(sys.argv[1])
 url_to_str = "{}".format(url)
