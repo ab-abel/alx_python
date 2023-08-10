@@ -14,4 +14,3 @@ def request_url(url):
     url_to_str = "{}".format(url)
     req = requests.get(url_to_str)
     print(req.headers["X-Request-Id"])
-
