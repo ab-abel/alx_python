@@ -3,7 +3,7 @@ module hbtn-header
 
 hbtn-header based on Request and sys Library
 
-hbtn-header is a requests, sys bases python script that takse URL and send a request to the URL,
+hbtn-header is a requests, sys bases python script that take URL and send a request to the URL,
 The value of this variable is different for each request.
 
 Basic Usage: 
@@ -20,6 +20,7 @@ Basic Usage:
     >>> dispaly using print
 
 Example:
+
     >>> py -m 1-hbtn_header.py https://intranet.hbtn.io
 
 Import:
