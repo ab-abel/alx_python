@@ -1,4 +1,4 @@
-'''
+"""
 module hbtn-header
 
 hbtn-header based on Request and sys Library
@@ -35,7 +35,7 @@ Parameters:
 Return:
 
     request headers x-request-Id
-'''
+"""
 
 import sys
 import requests
