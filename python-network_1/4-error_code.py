@@ -5,24 +5,21 @@ and display the response of the results.
 import sys
 import requests
 
-def request_url(url):
-    '''
-    This function send request using the url requests module
 
-    Parameters:
-        url: the link to the url to send a request to
+'''
+This function send request using the url requests module
 
-    Return:
-        return: the text response.
+Parameters:
+    url: the link to the url to send a request to
 
-    '''
-    url_to_str = "{}".format(url)
-    req = requests.get(url_to_str)
-    if req.status_code == 200:
-        print(req.text)
-    elif req.status_code >= 400:
-        print("Error code:{}".format(req.status_code))
+Return:
+    return: the text response.
 
-if __name__ == "__main__":
-    url = sys.argv[1]
-    request_url(url)
+'''
+url = sys.argv[1]
+url_to_str = "{}".format(url)
+req = requests.get(url_to_str)
+if req.status_code == 200:
+    print(req.text)
+elif req.status_code >= 400:
+    print("Error code:{}".format(req.status_code))
