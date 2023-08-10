@@ -11,7 +11,7 @@ request Url and return the headers X_request-id
 url = "http://0.0.0.0:5000/search_user"
 
 data = {
-    'email':cmd_input[2]
+    'email':str(sys.argv[2])
 }
 
 if letter:
