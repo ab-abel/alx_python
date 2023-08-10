@@ -17,7 +17,7 @@ req = requests.post(url, q)
 
 try:
     res_json = req.json()
-    if isinstance(req_json, (dict,list)):
+    if isinstance(res_json, (dict,list)):
         print("[{}] {}".format(res_json.id, res_json.name))
     elif res_json is None:
         print("No result")
