@@ -13,23 +13,22 @@ url = "http://0.0.0.0:5000/search_user"
 
 
 
-
-if str(sys.argv[1]) is not None:
-    letter = str(sys.argv[1])
-    if letter:
-        q=letter
-    else:
-        q=''
-else:
+try:
+    if str(sys.argv[1]) is None:
         print("No result")
-req = requests.post(url, q=q)
-# print("[{}] {}".format(req.text))
-
-# print(req.json)
-# if isinstance(res_json, (dict,list)):
-print("[{}] {}".format(req.json.id, req.json.name))
-# elif res_json is None:
-#     print("No result")
-# except:
-#     print("Not a valid JSON")
+    else:
+        letter = str(sys.argv[1])
+        if letter:
+            q=letter
+        else:
+            q=''
+        
+    req = requests.post(url, json=q)
+    if req.status_code == 200:
+        result = req.json()
+        print("[{}] {}".format(result['id'],result['name']))
+    else:
+        print("No result")
+except:
+    print("Not a valid JSON")
 
