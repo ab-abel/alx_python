@@ -17,8 +17,11 @@ Return:
 
 '''
 
-req = requests.get(str(sys.argv[1]))
-if req.status_code == 200:
-    print(req.text)
-elif req.status_code >= 400:
-    print("Error code:{}".format(req.status_code))
+try:
+    req = requests.get(str(sys.argv[1]))
+    if req.status_code == 200:
+        print(req.text)
+    elif req.status_code >= 400:
+        print("Error code:{}".format(req.status_code))
+except:
+    print(None)
