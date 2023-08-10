@@ -4,16 +4,14 @@ This is a python script that takse URL and send a request to the URL
 import sys
 import requests
 
-letter = str(sys.argv[1])
+
 '''
 request Url and return the headers X_request-id
 '''
 url = "http://0.0.0.0:5000/search_user"
 
-data = {
-    'email':str(sys.argv[2])
-}
 
+letter = str(sys.argv[1])
 if letter:
     data = {'q' : letter}
 else:
