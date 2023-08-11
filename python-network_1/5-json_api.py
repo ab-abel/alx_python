@@ -16,17 +16,12 @@ else:
     post_data = {'q':''}
 
 req = requests.post(url, data=post_data)
-
-print(req.headers)
-print("#####")
-print(req.json)
-print("#####")
-print(req.content)
-print("#####")
-print(req.text)
-# if req.status_code == 200:
+if req.status_code == 200:
+    print("#####")
+    print(req.text['id'])
+    print(req.text['name'])
 #     result = req.text
 #     print("{}".format(result))
-# else:
-#     print("No result")
+else:
+    print("No result")
     
