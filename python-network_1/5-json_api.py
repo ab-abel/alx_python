@@ -17,11 +17,9 @@ else:
 
 req = requests.post(url, data=post_data)
 if req.status_code == 200:
-    print("#####")
-    print(req.json)
     print(req.text)
-    # results = req.text
-    # print(results[0])
+    results = req.text
+    print(results["id"])
     # print(results[3])
     # print(results['id'])
 
