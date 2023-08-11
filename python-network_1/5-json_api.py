@@ -20,7 +20,7 @@ if req.status_code == 200:
     print("#####")
     print(req.text)
     results = req.text
-    print(result['id'])
+    print(results['id'])
     for k, v in results:
         print(k)
         print(v)
