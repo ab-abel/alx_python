@@ -10,18 +10,17 @@ request Url and return the headers X_request-id
 '''
 url = "http://0.0.0.0:5000/search_user"
 
+if (sys.argv[1]):
+    q= sys.argv[1]
+else: 
+    q=''
 
+req = requests.post(url, data=q)
 
-# print()
-# kwargs = {'q' : str(sys.argv[1])}
-# }
-    
-req = requests.post(url, str(sys.argv[1]))
-print(req.request)
+print(req.json())
 # if req.status_code == 200:
 #     result = req.text
 #     print("{}".format(result))
 # else:
 #     print("No result")
     
-
