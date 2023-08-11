@@ -17,7 +17,7 @@ else:
 
 req = requests.post(url, data=post_data)
 if req.status_code == 200:
-    print(req.text)
+    
     data = req.text
 
     # Remove curly braces and split the string
@@ -29,10 +29,8 @@ if req.status_code == 200:
         key, value = pair.split(':')
         result[key.strip('"')] = value.strip('"')
   
-    print(result['id'])
+    print("[{}] {}".format(result['id'], result['name']))
 
-    # result = req.text
-    # print("{}".format(result))
 else:
     print("No result")
     
