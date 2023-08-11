@@ -18,7 +18,7 @@ else:
 req = requests.post(url, data=post_data)
 if req.status_code == 200:
     
-    data = req.text
+    data = str(req.text)
     print(data)
     # Remove curly braces and split the string
     pairs = data[1:-1].split(',')
