@@ -21,15 +21,16 @@ if req.status_code == 200:
     data = '{}'.format(req.text)
     print(data)
     # Remove curly braces and split the string
-    pairs = data[1:-1].split(',')
+    pairs = data[1:-2].split(',')
 
     # Create a dictionary from the key-value pairs
     result = {}
     for pair in pairs:
         key, value = pair.split(':')
         result[key.strip('"')] = value.strip('"')
-  
-    print(f"[{result['id']}] {result['name':-2]}")
+    
+    
+    print(f"[{result['id']}] {result['name']}")
 
 else:
     print("No result")
