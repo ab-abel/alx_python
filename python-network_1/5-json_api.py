@@ -19,7 +19,13 @@ req = requests.post(url, data=post_data)
 if req.status_code == 200:
     print("#####")
     print(req.text)
-    # print(req.text)
+    results = req.text
+    print(result['id'])
+    for k, v in results:
+        print(k)
+        print(v)
+
+
     # result = req.text
     # print("{}".format(result))
 else:
