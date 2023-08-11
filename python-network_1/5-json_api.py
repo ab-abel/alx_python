@@ -18,10 +18,10 @@ else:
 req = requests.post(url, data=post_data)
 if req.status_code == 200:
     print("#####")
-    print(req.text.id)
-    print(req.text.name)
-#     result = req.text
-#     print("{}".format(result))
+    print(req.text)
+    # print(req.text)
+    # result = req.text
+    # print("{}".format(result))
 else:
     print("No result")
     
