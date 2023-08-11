@@ -17,7 +17,7 @@ else:
 
 req = requests.post(url, data=q)
 
-print(req.json())
+print(req.json(q))
 # if req.status_code == 200:
 #     result = req.text
 #     print("{}".format(result))
