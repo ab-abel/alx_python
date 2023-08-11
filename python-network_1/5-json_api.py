@@ -15,15 +15,15 @@ if (sys.argv[1]):
 else: 
     post_data = {'q':''}
 
-req = requests.post(url, data=post_data)
+req = requests.post(url, json=post_data)
 if req.status_code == 200:
     print("#####")
     print(req.text)
     results = req.text
     print(results[0])
-    for k, v in results:
-        print(k)
-        print(v)
+    print(results[3])
+    print(results['id'])
+
 
 
     # result = req.text
