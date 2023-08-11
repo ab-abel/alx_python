@@ -15,7 +15,7 @@ if (sys.argv[1]):
 else: 
     q=''
 
-req = requests.post(url, q)
+req = requests.post(url, json=q)
 
 print(req.headers)
 print("#####")
