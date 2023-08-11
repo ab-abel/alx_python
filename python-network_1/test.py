@@ -1,17 +1,12 @@
-import requests
+data = '{"id":89,"name":"holberton"}'
 
-# URL to which you want to send the POST request
-url = 'https://alu-intranet.hbtn.io/status'
+# Remove curly braces and split the string
+pairs = data[1:-1].split(',')
 
-# JSON data to be sent in the POST request
-json_data = {
-    'username': 'myuser',
-    'password': 'mypassword'
-}
+# Create a dictionary from the key-value pairs
+result = {}
+for pair in pairs:
+    key, value = pair.split(':')
+    result[key.strip('"')] = value.strip('"')
 
-# Send a POST request with JSON data
-response = requests.post(url, json=json_data)
-
-# Print the response content
-print("Response Content:")
-print(response.json)
+print(result)
