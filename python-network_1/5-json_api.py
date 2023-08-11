@@ -18,11 +18,17 @@ else:
 req = requests.post(url, data=post_data)
 if req.status_code == 200:
     print(req.text)
-    results = req.text
-    print(json.loads(results))
-    # print(results[3])
-    # print(results['id'])
+    data = req.text
 
+    # Remove curly braces and split the string
+    pairs = data[1:-1].split(',')
+
+    # Create a dictionary from the key-value pairs
+    result = {}
+    for pair in pairs:
+        key, value = pair.split(':')
+        result[key.strip('"')] = value.strip('"')
+  
 
 
     # result = req.text
