@@ -15,9 +15,15 @@ if (sys.argv[1]):
 else: 
     q=''
 
-req = requests.post(url, data=q)
+req = requests.post(url, q)
 
-print(req.json(q))
+print(req.headers)
+print("#####")
+print(req.json)
+print("#####")
+print(req.content)
+print("#####")
+print(req.text)
 # if req.status_code == 200:
 #     result = req.text
 #     print("{}".format(result))
