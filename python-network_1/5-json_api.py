@@ -17,7 +17,7 @@ url = "http://0.0.0.0:5000/search_user"
 # }
     
 req = requests.post(url, str(sys.argv[1]))
-print(req.headers)
+print(req.content)
 # if req.status_code == 200:
 #     result = req.text
 #     print("{}".format(result))
