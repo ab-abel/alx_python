@@ -29,7 +29,7 @@ if req.status_code == 200:
         key, value = pair.split(':')
         result[key.strip('"')] = value.strip('"')
   
-    print("[{}] {}".format(result['id'], result['name']))
+    print(f"[{result['id']}] {result['name']}")
 
 else:
     print("No result")
