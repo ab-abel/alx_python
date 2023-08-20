@@ -8,7 +8,7 @@ import MySQLdb
 # try connection and execution 
 try:
     # connect to database
-    database = MySQLdb.connect(user="root", passwd="root", db="?")
+    database = MySQLdb.connect(user="root", passwd="root", db="hbtn_0e_0_usa")
 
     # set cursor if connection succed
     cursor = database.cursor()
