@@ -8,13 +8,13 @@ import MySQLdb
 # try connection and execution 
 try:
     # connect to database
-    database = MySQLdb.connect(user="root", passwd="root", db="hbtn_0e_0_usa")
+    database = MySQLdb.connect(user="mysql", passwd="mysql", db="name")
 
     # set cursor if connection succed
     cursor = database.cursor()
 
     # run the select statement on the states table
-    cursor.execute("SELECT * FROM states")
+    cursor.execute("SELECT * FROM states ORDER by states.id")
 
     # fetch all rows in the result
     rows = cursor.fetchall()
