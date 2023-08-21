@@ -25,7 +25,7 @@ try:
 
         # run the select statement on the states table where users name start
         # with N using the like operation.
-        cursor.execute("SELECT * FROM states WHERE name LIKE\
+        cursor.execute("SELECT * FROM states WHERE name LIKE \
                         '[N-P]%' ORDER by states.id")
 
         # fetch all rows in the result
