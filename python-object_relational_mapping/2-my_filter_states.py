@@ -32,7 +32,7 @@ try:
         # loop through the result to get the state id and name
         for row in rows:
             # print only the capital letter not the small letter
-            print(row)
+            print(row) if row[1][0] == 'N' else None
     else:
         pass
 
