@@ -1,8 +1,7 @@
 '''
-This module is for task 1 which filter states using the 
+This module is for task 1 which filter states using the
 Keyword 'N'.
-
-The User pass the param through the terminal and the value is obtained 
+The User pass the param through the terminal and the value is obtained
 using the argV  and the db is querried with the param N
 
 '''
@@ -24,9 +23,10 @@ try:
         # set cursor if connection succed
         cursor = database.cursor()
 
-        # run the select statement on the states table where users name statr 
+        # run the select statement on the states table where users name statr
         # with N using the like operation.
-        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER by states.id")
+        cursor.execute("SELECT * FROM states WHERE name LIKE \
+                        'N%' ORDER by states.id")
 
         # fetch all rows in the result
         rows = cursor.fetchall()
