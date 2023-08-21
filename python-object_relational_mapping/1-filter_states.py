@@ -23,9 +23,9 @@ try:
         # set cursor if connection succed
         cursor = database.cursor()
 
-        # run the select statement on the states table where users name statr
+        # run the select statement on the states table where users name start
         # with N using the like operation.
-        cursor.execute("SELECT * FROM states WHERE name LIKE \
+        cursor.execute("SELECT * FROM states WHERE name =\
                         'N%' ORDER by states.id")
 
         # fetch all rows in the result
