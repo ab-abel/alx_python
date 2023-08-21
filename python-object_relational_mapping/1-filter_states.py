@@ -1,30 +1,44 @@
 '''
-A Script that list all users in the table
+This module is for task 1 which filter states using the 
+Keyword 'N'.
+
+The User pass the param through the terminal and the value is obtained 
+using the argV  and the db is querried with the param N
+
 '''
 
 # import dbobject
 import MySQLdb
+import sys
 
-# try connection and execution 
+# try connection and execution
 try:
     # connect to database
-    database = MySQLdb.connect(host='localhost', user="root", passwd="root", db="hbtn_0e_0_usa")
 
-    # set cursor if connection succed
-    cursor = database.cursor()
+    if len(sys.argv) > 3:
+        database = MySQLdb.connect(user=f"{sys.argv[1]}",
 
-    # run the select statement on the states table
-    cursor.execute("SELECT * FROM states")
+                                   passwd=f"{sys.argv[2]}",
+                                   db=f"{sys.argv[3]}")
 
-    # fetch all rows in the result
-    rows = cursor.fetchall()
+        # set cursor if connection succed
+        cursor = database.cursor()
 
-    # loop through the result to get the state id and name
-    for row in rows:
-        print(row)
+        # run the select statement on the states table where users name statr 
+        # with N using the like operation.
+        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER by states.id")
 
-#   if there is an error catch it with and exception message
+        # fetch all rows in the result
+        rows = cursor.fetchall()
+
+        # loop through the result to get the state id and name
+        for row in rows:
+            print(row)
+    else:
+        pass
+
+    # if there is an error catch it with and exception message
 except MySQLdb.OperationalError as e:
-    
+
     # print the error message
     print("Connection failed. {}".format(e))
