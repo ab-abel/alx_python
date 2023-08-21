@@ -26,14 +26,15 @@ try:
         # run the select statement on the states table where users name start
         # with N using the like operation.
         cursor.execute("SELECT * FROM states WHERE name LIKE \
-                        'N%' COLLATE Latin1_General_BIN ORDER by states.id")
+                        'N%' ORDER by states.id")
 
         # fetch all rows in the result
         rows = cursor.fetchall()
 
         # loop through the result to get the state id and name
         for row in rows:
-            print(row)
+            # print only the capital letter not the small letter
+            print(row) if row[1][0] == 'N' else None
     else:
         pass
 
