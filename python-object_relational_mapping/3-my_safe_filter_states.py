@@ -21,10 +21,8 @@ try:
 
         # run the select statement on the states table
         # get data from terminal
-        cursor.execute("SELECT * \
-                        FROM states \
-                        WHERE BINARY name = '{}'".format(sys.argv[4]))
-
+        cursor.execute("SELECT * FROM states WHERE name = %s \
+                        ORDER by states.id", (sys.argv[4],))
         # fetch all rows in the result
         rows = cursor.fetchall()
 
