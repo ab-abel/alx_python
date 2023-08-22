@@ -30,6 +30,7 @@ try:
     else:
         pass
 
+    database.close()        
     # if there is an error catch it with and exception message
 except MySQLdb.OperationalError as e:
 

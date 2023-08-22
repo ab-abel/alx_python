@@ -11,10 +11,8 @@ import sys
 # try connection and execution
 try:
     # connect to database
-
     if len(sys.argv) > 3:
         database = MySQLdb.connect(user=f"{sys.argv[1]}",
-
                                    passwd=f"{sys.argv[2]}",
                                    db=f"{sys.argv[3]}")
 
@@ -23,8 +21,9 @@ try:
 
         # run the select statement on the states table
         # get data from terminal
-        cursor.execute("SELECT * FROM states WHERE name = %s \
-                        ORDER by states.id", (sys.argv[4],))
+        cursor.execute("SELECT * \
+                        FROM states \
+                        WHERE BINARY name = '{}'".format(sys.argv[4]))
 
         # fetch all rows in the result
         rows = cursor.fetchall()
@@ -32,9 +31,11 @@ try:
         # loop through the result to get the state id and name
         for row in rows:
             # print only the capital letter not the small letter
-            print(row) if row[1][0] == 'N' else None
-        
+            # print(row) if row[1][0] == 'N' else None
+            print(row)
+            
         database.close()
+
     else:
         pass
 
