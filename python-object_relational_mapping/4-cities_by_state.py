@@ -19,7 +19,8 @@ try:
         cursor = database.cursor()
 
         # run the select statement on the cities table
-        cursor.execute("SELECT * FROM cities ORDER by cities.id")
+        cursor.execute("SELECT cities.id, cities.name, states.name FROM cities \
+                        INNER JOIN states ON cities.state_id=states.id ORDER by cities.id")
 
         # fetch all rows in the result
         rows = cursor.fetchall()
