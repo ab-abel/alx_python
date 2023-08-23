@@ -34,7 +34,6 @@ try:
             print(row)
             
         database.close()
-
     else:
         pass
 

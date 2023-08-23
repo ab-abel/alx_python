@@ -19,8 +19,10 @@ try:
         cursor = database.cursor()
 
         # run the select statement on the cities table
-        cursor.execute("SELECT cities.id, cities.name, states.name FROM cities \
-                        INNER JOIN states ON cities.state_id=states.id ORDER by cities.id")
+        cursor.execute("SELECT cities.id, cities.name, \
+                        states.name FROM cities INNER JOIN \
+                        states ON cities.state_id=states.id \
+                        ORDER by cities.id")
 
         # fetch all rows in the result
         rows = cursor.fetchall()
@@ -31,7 +33,7 @@ try:
     else:
         pass
 
-    database.close()        
+    database.close()
     # if there is an error catch it with and exception message
 except MySQLdb.OperationalError as e:
 
