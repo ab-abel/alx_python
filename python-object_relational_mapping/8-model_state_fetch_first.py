@@ -32,7 +32,7 @@ try:
 
     results = session.query(State).first()
 
-    if len(results) >= 1:
+    if results is not None:
         print(f"{results.id}: {results.name}")
     else:
         print("Nothing")
