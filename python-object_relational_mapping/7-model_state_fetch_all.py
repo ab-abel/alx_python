@@ -20,8 +20,9 @@ from sqlalchemy.orm import sessionmaker
 # define Base class for table class inheritance
 try:
     # create a DB engine connection
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
-             .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    engine = create_engine(
+                           "mysql+mysqldb://{}:{}@localhost/{}"
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
     # create a session variable and bint the engine to it
     Session = sessionmaker(bind=engine)
