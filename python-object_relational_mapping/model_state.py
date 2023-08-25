@@ -10,6 +10,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # define Base class for table class inheritance
 Base = declarative_base()
 
+
 # create a table for class state
 class State(Base):
     '''
@@ -22,5 +23,6 @@ class State(Base):
     # define table name
     __tablename__ = 'states'
     # define column for states table
-    id = Column(Integer, primary_key=True, autoincrement=True, unique=True, nullable=False)
+    id = Column(Integer, primary_key=True,
+                autoincrement=True, unique=True, nullable=False)
     name = Column(String(128), nullable=False)
