@@ -33,7 +33,7 @@ try:
         for row in rows:
             # print only the capital letter not the small letter
             print(row) if row[1][0] == 'N' else None
-        
+
         database.close()
     else:
         pass
