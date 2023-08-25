@@ -34,7 +34,11 @@ try:
     results = session.query(State).first()
 
     # print the first result
-    print(f"{results.id}: {results.name}") if len(results) >= 1 else print("Nothing")
+    if len(results) >= 1:
+        print(f"{results.id}: {results.name}")
+    else:
+        print("Nothing")
+
 
 except AttributeError as e:
     print(f"error message {e}")
