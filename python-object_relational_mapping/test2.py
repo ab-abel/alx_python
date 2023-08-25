@@ -34,12 +34,12 @@ try:
     results = session.query(State).first()
 
     # print the first result
-    print(f"{results.id}: {results.name}") if results is not None else print("Nothing")
+    print(f"{results.id}: {results.name}") if len(results) >= 1 else print("Nothing")
 
 except AttributeError as e:
     print(f"error message {e}")
 
-except TypeError as e:
+except TypeError:
     print("Nothing")
 
 except sqlalchemy.exc.ProgrammingError as e:
