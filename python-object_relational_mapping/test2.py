@@ -30,9 +30,12 @@ try:
     # instatiate the session
     session = Session()
 
+    # get the first element from the table
     results = session.query(State).first()
 
-    print(f"{results.id}: {results.name}")
+    # print the first result
+    print(f"{results.id}: {results.name}") if results is not None else print("Nothing")
+
 except AttributeError as e:
     print(f"error message {e}")
 
