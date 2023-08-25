@@ -14,7 +14,6 @@ Base = declarative_base()
 class State(Base):
     '''
         class defintion for SQL table states
-        
         pARAMETER
             Base declarative
         Return:
@@ -25,21 +24,3 @@ class State(Base):
     # define column for states table
     id = Column(Integer, primary_key=True, autoincrement=True, unique=True, nullable=False)
     name = Column(String(128), nullable=False)
-
-
-
-try:     
-    # create a DB engine connection
-    engine =  create_engine("mysql+mysqldb://root:root@localhost/country")
-
-    # Test the connection
-    connection = engine.connect()
-    
-    # print connection succed.
-    if connection:
-        print('yes')
-except  AttributeError as e:
-    print(f"error message {e}")
-
-except sqlalchemy.exc.OperationalError as e:
-    print (f"An Error occured: {e}")
