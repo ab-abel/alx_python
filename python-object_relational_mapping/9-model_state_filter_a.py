@@ -32,10 +32,8 @@ try:
 
     results = session.query(State).filter(State.name.like('%a%'))
 
-    if results is not None:
-        print(f"{results.id}: {results.name}")
-    else:
-        print("Nothing")
+    for result in results:
+        print(f"{result.id}: {result.name}")
 
 except AttributeError as e:
     print(f"error message {e}")
