@@ -39,5 +39,8 @@ try:
 except AttributeError as e:
     print(f"error message {e}")
 
+except TypeError as e:
+    print("Nothing")
+
 except sqlalchemy.exc.ProgrammingError as e:
     print(f"An Error occured: {e}")
