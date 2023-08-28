@@ -1,5 +1,8 @@
 '''
-Write a script that starts a Flask web application:
+Write a script that starts a 
+Flask web application: The application
+must run on port the default port 
+and must run on 0.0.0.0
 '''
 # import flask module
 from flask import Flask
@@ -17,6 +20,10 @@ def hello():
     a function definition that return
     a strin hello... on a get request 
     to a router page
+    param: 
+        type: NONE
+    Return:
+        type: String
     '''
     return "Hello HBNB!"
 
