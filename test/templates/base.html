@@ -1,0 +1,21 @@
+<html>
+    <head>
+        {% block head %}
+            <link rel="link_to_style.css">
+            <title>
+                {% block title %}
+                {% end block %}
+            </title>
+        {% end block %}
+    </head>
+    <body>
+        <div id="content">
+            {% block content %}
+            {%end block %}
+        </div>
+        <div id="footer">
+            {% block footer %}
+            {% end block %}
+        </div>
+    </body>
+</html>
