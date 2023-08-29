@@ -69,11 +69,25 @@ def python_is_cool(text='is cool'):
 
 @app.route('/number/<int:n>')
 def hello_id(n):
+    '''
+    Funtion tha return the int param passed
+    Param:
+        type:
+    Return:
+        type: string + value pass
+    '''
     return f"{n} is a number"
 
 
 @app.route('/number_template/<int:n>')
 def hello_number_templates(n):
+    '''
+    Funtion that pass a param to a defines templates
+    Param:
+        type: int
+    return:
+        HTML with the value passed
+    '''
     return render_template('5-number.html', n=n)
 
 if __name__=='__main__':
