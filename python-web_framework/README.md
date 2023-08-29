@@ -31,16 +31,15 @@ Copy the previous task to a new script that starts a Flask web application:
     - You must use the option strict_slashes=False in your route definition
 
 ## Task 2
-###  Filter states by user input
-    Write a script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
+###  C is fun!
+Copy the previous task to a new script that starts a Flask web application:
 
-        - Your script should take 4 arguments: mysql username, mysql password, database name and state name searched (no argument validation needed)
-        - You must use the module MySQLdb (import MySQLdb)
-        - Your script should connect to a MySQL server running on localhost at port 3306
-        - You must use format to create the SQL query with the user input
-        - Results must be sorted in ascending order by states.id
-        - Results must be displayed as they are in the example below
-        - Your code should not be executed when imported
+    - Your web application must be listening on 0.0.0.0, port 5000
+    - Routes:
+        - /: display “Hello HBNB!”
+        - /hbnb: display “HBNB”
+        - /c/<text>: display “C ” followed by the value of the text variable (replace underscore _ symbols with a space )
+    - You must use the option strict_slashes=False in your route definition
 ## Task 3
 ###   SQL Injection...
     Wait, do you remember the previous task? Did you test "Arizona'; TRUNCATE TABLE states ; SELECT * FROM states WHERE name = '" as an input?
