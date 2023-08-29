@@ -52,7 +52,7 @@ def hbnb(text):
     Return:
         type: String
     '''
-    return f"C {text}"
+    return f"C {escape(text)}"
 
 if __name__=='__main__':
     # for every route
