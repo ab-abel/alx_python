@@ -11,3 +11,6 @@ def hello():
 def hello_user(username):
     return f"Hello,  {escape(username)}"
 
+
+name = "ALice"
+print(name.replace('A', " "))
