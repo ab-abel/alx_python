@@ -54,8 +54,9 @@ def hbnb_C_is_fun(text):
     '''
     return f"C {text.replace('_', ' ')}"
 
-@app.route('/python/<text>', defaults={'text':'is cool'})
-def python_is_cool(text):
+@app.route('/python/')
+@app.route('/python/<text>')
+def python_is_cool(text='is cool'):
     '''
     this return a default text is cool
     if no param is passed
@@ -69,4 +70,4 @@ def python_is_cool(text):
 if __name__=='__main__':
     # for every route
     app.url_map.strict_slashes = False
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
