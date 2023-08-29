@@ -54,7 +54,7 @@ def hbnb_C_is_fun(text):
     '''
     return f"C {text.replace('_', ' ')}"
 
-@app.route('/python/<text="is cool">')
+@app.route('/python/<text>', defaults={'text':'is cool'})
 def python_is_cool(text):
     '''
     this return a default text is cool
