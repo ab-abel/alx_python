@@ -64,7 +64,7 @@ def python_is_cool(text='is cool'):
     Return:
         type: string
     '''
-    return f"Python {text.replace('_', ' ')}"
+    return f"Python {escape(text.replace('_', ' '))}"
 
 if __name__=='__main__':
     # for every route
