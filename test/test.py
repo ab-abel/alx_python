@@ -1,16 +1,20 @@
-from glob import escape
 from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/')
-def hello():
-    return request.url_for('')
+def hello_hbnb():
+    return "Hello HBNB"
 
-@app.route('/<username>')
-def hello_user(username):
-    return f"Hello,  {escape(username)}"
+@app.route('/hbnb')
+def hbnb():
+    return "HBNB"
 
+@app.route('/c/<text>')
+def c_is_fun(text):
+    return f"C {escape(text.replace('_', ' '))}"
 
-name = "ALice"
-print(name.replace('A', " "))
+if __name__ == "__main__":
+    app.url_map.strict_slashes = False
+    app.run(host='0.0.0.0')
