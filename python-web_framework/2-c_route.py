@@ -42,7 +42,7 @@ def hbnb():
     return "HBNB"
 
 @app.route('/c/<text>')
-def hbnb(text):
+def hbnb_C_is_fun(text):
     '''
     a function definition that return
     a strin hello... on a get request 
