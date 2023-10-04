@@ -11,7 +11,9 @@ todo_url = f'https://jsonplaceholder.typicode.com/users/{sys.argv[1]}/todos'
 req = requests.get(todo_url) 
 results = json.loads(req.text)
 
-with open(f"{sys.argv[1]}.csv", 'w', newline='') as file:
+file = open(f"{sys.argv[1]}.csv", 'x')
+
+with open(file, 'w', newline='') as file:
     writer = csv.writer(file)
     for result in results:
         users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(result['userId']))
