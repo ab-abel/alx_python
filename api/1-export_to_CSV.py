@@ -13,10 +13,9 @@ results = json.loads(req.text)
 
 file = open(f"{sys.argv[1]}.csv", 'x')
 
-
 for result in results:
     users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(result['userId']))
     user = json.loads(users.text)
-    with open(f'{result['userId']}.csv', 'x', newline='') as file:
+    with open(f'{result['userId']}.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([result['userId'], user['username'], result['completed'], result['title']])
