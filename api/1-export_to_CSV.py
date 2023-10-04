@@ -3,8 +3,8 @@ DOc strings
 '''
 import csv
 import json
-import sys
 import requests
+import sys
 
 todo_url = f'https://jsonplaceholder.typicode.com/users/{sys.argv[1]}/todos'
 
