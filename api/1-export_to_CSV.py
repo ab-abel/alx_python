@@ -7,7 +7,7 @@ import csv
 import requests
 import sys
 
-if sys.argv[1]:
+if __name__=='__main__':
     user_id = sys.argv[1]
 
     user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
@@ -18,7 +18,7 @@ if sys.argv[1]:
 
     filename = "{}.csv".format(user_id)
 
-    with open(filename, 'x') as file:
+    with open(filename, 'w') as file:
         writter = csv.writer(file)
         for task in todo_data:
-            writter.writerow([user_id, str(user_data['name']), task['completed'], task['title']])
+            writter.writerow([user_id, str(user_data['name']),task['completed'], task['title']])
