@@ -1,7 +1,13 @@
-#!/usr/bin/python3
 """
-This is a python script that takse id from d user and send a request to the Url
-and save the formatted response to a json file.
+This is a python script that takse id from d user
+and send a request to the Url and save the
+formatted response to a json file.
+param:
+    filename
+functions:
+    data_to_json()
+    param:
+        user_id : string
 """
 import json
 import requests
@@ -10,9 +16,9 @@ import sys
 
 def data_to_json(user_id):
     """
-        Fetches the employee's details and TODO list using the provided API endpoints,
-        calculates the progress, and exports the information to a JSON file.
-
+        Fetches the employee's details and TODO list using the
+        provided API endpoints,calculates the progress, and
+        exports the informationto a JSON file.
         Parameters:
         - employee_id (int): The ID of the employee.
 
@@ -20,8 +26,10 @@ def data_to_json(user_id):
         None
     """
     # format url with input from user
-    user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
-    todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
+    user_url = 'https://jsonplaceholder.typicode.com/users/{}'\
+    .format(user_id)
+    todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'\
+    .format(user_id)
 
     # request data frm todo and user api
     user_data = requests.get(user_url).json()
