@@ -38,15 +38,14 @@ def data_to_json(user_id):
     # creat a json data from the todo and user object
     json_data = {
         user_id : [ {
-                "task":task['title'], "completed":task['completed'],
-                "username":user_data['username'],
+                "username": user_data['username'],"task": task['title'], "completed": task['completed'],
             }
             for task in todo_data
         ]
     }
 
     # Write to JSON file name filename
-    filename = f"{user_id}.json"
+    filename = "todo_all_employees.json"
 
     # open the file and overwrite it content with w
     with open(filename, 'w') as file:
