@@ -22,8 +22,7 @@ try:
         user_id = result['userId']
 
     filename = f"{str(sys.argv[1])}.csv"
-    new_file_path = os.path.join(OUTPUT_DIR, str(filename))
-    with open(new_file_path, 'w', newline='') as file:
+    with open(str(filename), 'x', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([result['userId'], user['username'], result['completed'], result['title']])
 except TimeoutError:
