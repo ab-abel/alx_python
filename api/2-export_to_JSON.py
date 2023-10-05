@@ -1,12 +1,11 @@
 """
-This is a python module that takes id from d user
+This is the export Json python module
+that takes id from d user
 and send a request to the Url. the response is
 formatted and save to a json file.
 
-param:
-    filename: string
-    user_id : string
-    data_to_json : function
+>>> data_to_json(2)
+write json objet to the json files
 """
 import json
 import requests
@@ -19,6 +18,11 @@ def data_to_json(user_id):
     provided API endpoints,
     exports the informationto a JSON file.
 
+    >>> data_to_json(-1)
+    Traceback (most recent call last):
+        ...
+    ValueError: n must be >= 0
+    
     Parameters:
     - employee_id (int): The ID of the employee.
 
