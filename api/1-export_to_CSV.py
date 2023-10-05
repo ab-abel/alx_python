@@ -18,7 +18,7 @@ if sys.argv[1]:
 
     filename = "{}.csv".format(user_id)
 
-    with open(filename, 'w') as file:
+    with open(filename, 'x') as file:
         writter = csv.writer(file)
         for task in todo_data:
             writter.writerow([user_id, str(user_data['name']), task['completed'], task['title']])
