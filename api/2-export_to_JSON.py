@@ -41,7 +41,6 @@ def data_to_json(user_id):
     filename = f"{user_id}.json"
 
     # open the file and overwrite it content with w
-
     with open(filename, 'w') as file:
         json.dump(json_data, file, indent=2)
 
