@@ -4,20 +4,21 @@ a csv file defined on creation
     return : csv
 '''
 import csv
+import os
 import requests
 import sys
 
-if __name__=='__main__':
-    user_id = sys.argv[1]
+user_id = sys.argv[1]
 
-    user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
-    todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
+user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
+todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
 
-    user_data = requests.get(user_url).json()
-    todo_data = requests.get(todo_url).json()
+user_data = requests.get(user_url).json()
+todo_data = requests.get(todo_url).json()
 
-    filename = "{}.csv".format(user_id)
+filename = "{}.csv".format(user_id)
 
+if os.path.exists(filename):
     with open(filename, 'w') as file:
         writter = csv.writer(file, quoting = csv.QUOTE_ALL)
         for task in todo_data:
