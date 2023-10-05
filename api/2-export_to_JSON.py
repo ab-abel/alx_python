@@ -1,5 +1,5 @@
-#!/usr/bin/python3
 """
+#!/usr/bin/python3
 This is a python script that takse id from d user and send a request to the Url
 and save the formatted response to a json file.
 """
