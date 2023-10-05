@@ -2,10 +2,11 @@
 DOc strings
 '''
 import csv
-
+import json
+import os
 import requests
 import sys
-import json
+
 
 todo_url = f'https://jsonplaceholder.typicode.com/users/{sys.argv[1]}/todos'
 
@@ -21,9 +22,9 @@ try:
         user_id = result['userId']
 
     filename = f"{str(sys.argv[1])}.csv"
-    with open(filename, 'w', newline='') as file:
+    new_file_path = os.path.join(OUTPUT_DIR, str(filename))
+    with open(new_file_path, 'w', newline='') as file:
         writer = csv.writer(file)
-
-            # writer.writerow([result['userId'], user['username'], result['completed'], result['title']])
+        writer.writerow([result['userId'], user['username'], result['completed'], result['title']])
 except TimeoutError:
     print("connection timed out")
