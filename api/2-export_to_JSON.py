@@ -2,6 +2,7 @@
 This is a python script that takse id from d user
 and send a request to the Url and save the
 formatted response to a json file.
+
 param:
     filename: string
     user_id : string
@@ -17,6 +18,7 @@ def data_to_json(user_id):
     Fetches the employee's details and TODO list using the
     provided API endpoints,calculates the progress, and
     exports the informationto a JSON file.
+
     Parameters:
     - employee_id (int): The ID of the employee.
 
