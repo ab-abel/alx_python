@@ -18,7 +18,7 @@ todo_data = requests.get(todo_url).json()
 
 filename = "{}.csv".format(user_id)
 
-with open(filename, 'w') as file:
+with open(filename, 'w', newline='') as file:
     writter = csv.writer(file, quoting = csv.QUOTE_ALL)
     for task in todo_data:
         writter.writerow([user_id, str(user_data['name']),task['completed'], task['title']])
