@@ -2,7 +2,7 @@ import json
 import requests
 import sys
 
-def data_to_json(user_id ):
+def data_to_json(user_id):
     """
         Fetches the employee's details and TODO list using the provided API endpoints,
         calculates the progress, and exports the information to a JSON file.
@@ -23,10 +23,8 @@ def data_to_json(user_id ):
 
     # creat a json data from the todo and user object
     json_data = {
-        user_id :[
-            {
-                "task":task['title'],
-                "completed":task['completed'],
+        user_id : [ {
+                "task":task['title'], "completed":task['completed'],
                 "username":user_data['username'],
             }
             for task in todo_data
@@ -41,5 +39,5 @@ def data_to_json(user_id ):
     with open(filename, 'w') as file:
         json.dump(json_data, file, indent=2)
 
-# function call 
+# function call
 data_to_json(sys.argv[1])
