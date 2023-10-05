@@ -1,16 +1,13 @@
-'''
-This is a python script that takse URL and send a request to the Url
-and display the response of the results.
-'''
+#!/usr/bin/python3
+"""
+This is a python script that takse id from d user and send a request to the Url
+and save the formatted response to a json file.
+"""
 import json
 import requests
 import sys
 
 
-'''
-This is a python script that takse URL and send a request to the Url
-and display the response of the results.
-'''
 def data_to_json(user_id):
     """
         Fetches the employee's details and TODO list using the provided API endpoints,
