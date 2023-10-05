@@ -13,7 +13,7 @@ import requests
 import sys
 
 
-def data_to_json(user_id):
+def employee_todo_task():
     """
     Fetches the employee's details and TODO list using the
     provided API endpoints,
@@ -26,30 +26,40 @@ def data_to_json(user_id):
     None
     """
     # format url with input from user
-    user_url = 'https://jsonplaceholder.typicode.com/users/{}'\
-    .format(user_id)
-    todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'\
-    .format(user_id)
+    user_url = 'https://jsonplaceholder.typicode.com/users'
+    users_data = requests.get(user_url).json()
 
-    # request data frm todo and user api
-    user_data = requests.get(user_url).json()
-    todo_data = requests.get(todo_url).json()
+    all_task_data = {}
+    
+    for user_data in users_data:
+        user_id = user_data.get('id')
+        
+        username = user_data.get('username')
+        
+        todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'\
+        .format(user_id)
+        todo_data = requests.get(todo_url).json()
 
-    # creat a json data from the todo and user object
-    json_data = {
-        user_id : [ {
-                "username": user_data['username'],"task": task['title'], "completed": task['completed'],
-            }
-            for task in todo_data
-        ]
-    }
+        user_task_data = []
+        for task in todo_data:
+            user_task_data.append({
+                "username":username,
+                "task": task['title'],
+                "completed": task['completed']
+            })
+        all_task_data[user_id] = user_task_data
+    #   
+    # request data frm to
+    # do and user api
+    
 
     # Write to JSON file name filename
     filename = "todo_all_employees.json"
 
     # open the file and overwrite it content with w
     with open(filename, 'w') as file:
-        json.dump(json_data, file, indent=2)
+        json.dump(all_task_data, file, indent=2)
 
 # function call
-data_to_json(sys.argv[1])
+if __name__=='__main__':
+    employee_todo_task()
