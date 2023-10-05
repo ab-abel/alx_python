@@ -1,29 +1,24 @@
 '''
-DOc strings
+This module export content from an api into
+a csv file defined on creation
+    return : csv
 '''
 import csv
-import json
-import os
 import requests
 import sys
 
+if sys.argv[1]:
+    user_id = sys.argv[1]
 
-todo_url = f'https://jsonplaceholder.typicode.com/users/{sys.argv[1]}/todos'
+    user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
+    todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
 
-try:
-    csv_data = []
-    user_id = 0
-    req = requests.get(todo_url) 
-    results = json.loads(req.text)
-    for result in results:
-        users = requests.get(f"https://jsonplaceholder.typicode.com/users/{result['userId']}")
-        user = json.loads(users.text)
-        csv_data.append([result['userId'], user['username'], result['completed'], result['title']]) 
-        user_id = result['userId']
+    user_data = requests.get(user_url).json()
+    todo_data = requests.get(todo_url).json()
 
-    filename = f"{str(sys.argv[1])}.csv"
-    with open(str(filename), 'x', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow([result['userId'], user['username'], result['completed'], result['title']])
-except TimeoutError:
-    print("connection timed out")
+    filename = "{}.csv".format(user_id)
+
+    with open(filename, 'w') as file:
+        writter = csv.writer(file)
+        for task in todo_data:
+            writter.writerow([user_id, str(user_data['name']), task['completed'], task['title']])
