@@ -1,42 +1,56 @@
 '''
-This module export content from an api into
-a csv file defined on creation
-    return : csv
+A python script that uses the REST API for a given employee ID
+returns information about his/her TODO list progress.
 '''
-import csv
-import os
+
+import json
 import requests
 import sys
 
-user_id = str(sys.argv[1])
 
-user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
-todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
+def data_to_json(user_id):
+    """
+    Fetches the employee's details and TODO list using the
+    provided API endpoints,
+    exports the informationto a JSON file.
 
-user_data = requests.get(user_url).json()
-todo_data = requests.get(todo_url).json()
+    >>> data_to_json(-1)
+    Traceback (most recent call last):
+        ...
+    ValueError: n must be >= 0
+    
+    Parameters:
+    - employee_id (int): The ID of the employee.
 
-filename = "{}.csv".format(user_id)
+    Returns:
+    None
+    """
+    # format url with input from user
+    user_url = 'https://jsonplaceholder.typicode.com/users/{}'\
+    .format(user_id)
+    todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'\
+    .format(user_id)
 
-with open(filename, 'w', newline='') as file:
-    writter = csv.writer(file, quoting = csv.QUOTE_ALL)
-    for task in todo_data:
-        writter.writerow([user_id, str(user_data['username']),task['completed'], task['title']])
+    # request data frm todo and user api
+    user_data = requests.get(user_url).json()
+    todo_data = requests.get(todo_url).json()
 
-username = user_data['username']
-id=user_id
-flag = 0
-with open(str(id) + ".csv", 'r') as f:
-    for line in f:
-        # print(line)
-        if not line == '\n':
-            if not str(id) in line:
-                print("User ID: Incorrect / ", end='')
-                flag = 1
-            if not str(username) in line:
-                print(str(username))
-        #         print("Username: Incorrect")
-        #         flag = 1
+    # creat a json data from the todo and user object
+    json_data = {
+        user_id : [ {
+                "task":task['title'], "completed":task['completed'],
+                "username":user_data['username'],
+            }
+            for task in todo_data
+        ]
+    }
 
-if flag == 0:
-    print("User ID and Username: OK")
+    # Write to JSON file name filename
+    filename = f"{user_id}.json"
+
+    # open the file and overwrite it content with w
+    with open(filename, 'w') as file:
+        json.dump(json_data, file, indent=2)
+
+# function call
+data_to_json(sys.argv[1])
