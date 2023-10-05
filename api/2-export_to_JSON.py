@@ -34,11 +34,14 @@ json_data = {
 filename = f"{user_id}.json"
 
 # open the file and overwrite it content with w
-with open(filename, 'w') as file:
+def write_to_json(json_data):
     '''
-    use the open method to write to JSON
-        Prameters: 
-            filename : string
-            permision : W
+    a function that write a given json data to a json file
+        param : json data
+        return : none
     '''
-    json.dump(json_data, file, indent=2)
+    with open(filename, 'w') as file:
+        json.dump(json_data, file, indent=2)
+
+# function call 
+write_to_json(json_data)
