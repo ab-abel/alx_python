@@ -35,4 +35,10 @@ filename = f"{user_id}.json"
 
 # open the file and overwrite it content with w
 with open(filename, 'w') as file:
+    '''
+    use the open method to write to JSON
+        Prameters: 
+            filename : string
+            permision : W
+    '''
     json.dump(json_data, file, indent=2)
