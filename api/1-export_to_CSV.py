@@ -20,7 +20,7 @@ try:
         csv_data.append([result['userId'], user['username'], result['completed'], result['title']]) 
         user_id = result['userId']
 
-    filename = f"{str(user_id)}.csv"
+    filename = f"{str(sys.argv[1])}.csv"
     with open(filename, 'w', newline='') as file:
         writer = csv.writer(file)
 
