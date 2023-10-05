@@ -1,8 +1,3 @@
-'''
-This module export content from an api into
-a JSON file defined on creation
-    filename: USER_ID.json
-'''
 import json
 import requests
 import sys
