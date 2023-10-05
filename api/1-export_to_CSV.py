@@ -14,7 +14,7 @@ results = json.loads(req.text)
 csv_data = []
 user_id = 0
 for result in results:
-    users = requests.get(f'https://jsonplaceholder.typicode.com/users/{result['userId']}')
+    users = requests.get(f"https://jsonplaceholder.typicode.com/users/{result['userId']}")
     user = json.loads(users.text)
     csv_data.append([result['userId'], user['username'], result['completed'], result['title']]) 
     user_id = result['userId']
